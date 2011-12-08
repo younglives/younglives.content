@@ -1,0 +1,93 @@
+<metal:pending define-macro="pending">
+
+    <fieldset id="fieldset-pending">
+    <legend id="fieldsetlegend-pending">Pending users</legend>
+    <div tal:define="users pending" 
+         tal:condition="users"
+         class="field">
+    
+        <metal:users use-macro="context/@@users-settings-macros/users" />
+        <div class="visualClear"><!-- --></div>
+    
+        <div class="formControls">
+            <span class="actionButtons">
+                <input type="submit" class="context" value="Confirm selected" name="confirm"/>
+                <input type="submit" class="context" value="Reject selected" name="reject" />
+            </span>
+        </div>
+        
+    </div>
+    <p tal:condition="not:pending">No pending users found.</p>
+    </fieldset>
+</metal:pending>
+
+<metal:pending define-macro="viewers">
+
+    <fieldset id="fieldset-viewers">
+    <legend id="fieldsetlegend-viewers">Viewers</legend>
+    <div tal:define="users viewers" 
+         tal:condition="users"
+         class="field">
+         
+        <metal:users use-macro="context/@@users-settings-macros/users" />
+        <div class="visualClear"><!-- --></div>
+    
+        <div class="formControls">
+            <span class="actionButtons">
+                <input type="submit" class="context" value="Move selected to editors" name="upgrade"/>
+                <input type="submit" class="context" value="Remove selected" name="remove" />
+            </span>
+        </div>
+          
+    </div>
+    <p tal:condition="not:viewers">No users found in viewers group.</p>
+    </fieldset> 
+
+</metal:pending>
+
+<metal:pending define-macro="editors">
+
+    <fieldset id="fieldset-editors">
+    <legend id="fieldsetlegend-editors">Editors</legend>
+    <div tal:define="users editors" 
+         tal:condition="users"
+         class="field">
+    
+        <metal:users use-macro="context/@@users-settings-macros/users" />
+        <div class="visualClear"><!-- --></div>
+        
+            <div id="actionsView" class="formControls">
+                <span class="actionButtons">
+                    <input type="submit" class="context" value="Move selected to viewers" name="downgrade"/>
+                    <input type="submit" class="context" value="Remove selected" name="remove" />
+                </span>
+            </div>
+           
+    </div>
+    <p tal:condition="not:editors">No users found in editors group.</p>
+    </fieldset> 
+
+</metal:pending>
+
+
+<metal:users define-macro="users">
+    <table class="listing" width="100%">
+        <tr>
+            <th><input type="checkbox" class="checkall"/></th>
+            <th>Fullname</th>
+            <th>Email</th>
+        </tr>
+        <tr tal:repeat="user users"
+            tal:attributes="class python:repeat['user'].even() and 'odd' or 'even'">
+            <td><input type="checkbox" name="users:list" tal:attributes="value user/email"/></td>
+            <td><span tal:replace="repeat/user/number" />. 
+                <a href="#" title=""
+                    tal:attributes="href string:${context/absolute_url}/update-user?username=${user/email};
+                        title python:', '.join([user[x] for x in user if x in ['fullname','jobtitle','location'] and user[x] is not None])" 
+                   tal:content="user/fullname" /></td>
+            <td><a href="" 
+                   tal:attributes="href string:mailto:${user/email}" 
+                   tal:content="user/email" /></td>
+        </tr>
+    </table>
+</metal:users>

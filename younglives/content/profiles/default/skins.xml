@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+
+    <object name="younglives-content_css" 
+        meta_type="Filesystem Directory View"
+        directory="younglives.content:skins/younglives-content_css" />
+
+    <object name="younglives-content_templates" 
+        meta_type="Filesystem Directory View"
+        directory="younglives.content:skins/younglives-content_templates" />
+        
+    <object name="younglives-content_images" 
+        meta_type="Filesystem Directory View"
+        directory="younglives.content:skins/younglives-content_images" />
+        
+    <skin-path name="*">
+        <layer name="younglives-content_css" 
+            insert-after="custom" />
+    </skin-path>
+        
+    <skin-path name="*">
+        <layer name="younglives-content_images" 
+            insert-after="younglives-content_css" />
+    </skin-path>
+    
+    <skin-path name="*">
+        <layer name="younglives-content_templates" 
+            insert-after="younglives-content_images" />
+    </skin-path>
+
+</object>

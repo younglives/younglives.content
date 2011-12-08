@@ -1,0 +1,15 @@
+<tal:block tal:define="quote_text python:context.getField('quote').get(context)" tal:condition="quote_text">
+
+<div id="quote">
+
+    <div class="wrapper">
+    
+    	<div class="quote">
+    		<blockquote><em tal:content="quote_text">We need to end child poverty in order to break the cycle of poverty.</em></blockquote>
+    	</div>
+    
+    </div>
+    
+</div>
+
+</tal:block>

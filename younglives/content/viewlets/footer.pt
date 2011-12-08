@@ -1,0 +1,124 @@
+<div id="younglives-footer" tal:define="isHomepage view/isHomepage">
+	<div class="wrapper">
+		<div class="footer-img" tal:condition="isHomepage" tal:define="img view/footer_image"> 
+			<img tal:replace="structure img/tag" tal:condition="img"/> 
+		</div> 
+
+		<div class="footer-blocks" tal:condition="not:isHomepage"> 
+			<div class="block" tal:repeat="box view/boxes"> 
+
+				<h6 tal:content="box/title">What we do</h6> 
+				<ul class="arrow-list">
+                    <li tal:repeat="link box/links"
+                        tal:attributes="class python:repeat['link'].end and 'last' or ''"
+                        ><a href="" title=""
+                            tal:attributes="href link/url;
+                                            title link/title"
+                            tal:content="link/title">
+                        Our policy work</a></li>
+                </ul>
+
+			</div> 
+
+			<div class="block news"> 
+
+				<h6>Find out more</h6> 
+
+				<ul> 
+					<li>
+						<a href="#" title="News &amp; Events"
+                            tal:attributes="href string:${context/portal_url}/what-we-do/news-and-events">
+							<span class="icon-news">&gt;</span>
+							News &amp; Events
+						</a>
+					</li> 
+                    <li>
+                        <a href="#" title="E-newsletter / e-alerts"
+                            tal:attributes="href string:${context/portal_url}/who-we-are/find-out-more">
+                            <span class="icon-email">&gt;</span>
+                            E-newsletter / e-alerts
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#" title="iTunes U podcasts"
+                            tal:attributes="href string:${context/portal_url}/who-we-are/find-out-more">
+                            <span class="icon-podcast">&gt;</span>
+                            iTunes U podcasts
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#" title="Contact us" accesskey="6"
+                            tal:attributes="href string:${context/portal_url}/who-we-are/contact-details">
+                            <span class="icon-contact">&gt;</span>
+                            Contact us
+                        </a>
+                    </li> 
+				</ul> 
+
+			</div> 
+		</div>
+
+		<div class="block news" tal:condition="isHomepage"> 
+
+			<h6>Find out more</h6> 
+
+                <ul> 
+                    <li>
+                        <a href="#" title="News &amp; Events"
+                            tal:attributes="href string:${context/portal_url}/what-we-do/news-and-events">
+                            <span class="icon-news">&gt;</span>
+                            News &amp; Events
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#" title="E-newsletter / e-alerts"
+                            tal:attributes="href string:${context/portal_url}/who-we-are/find-out-more">
+                            <span class="icon-email">&gt;</span>
+                            E-newsletter / e-alerts
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#" title="iTunes U podcasts"
+                            tal:attributes="href string:${context/portal_url}/who-we-are/find-out-more">
+                            <span class="icon-podcast">&gt;</span>
+                            iTunes U podcasts
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#" title="Contact us" accesskey="6"
+                            tal:attributes="href string:${context/portal_url}/who-we-are/contact-details">
+                            <span class="icon-contact">&gt;</span>
+                            Contact us
+                        </a>
+                    </li> 
+                </ul> 
+
+		</div> 
+
+		<div class="logo" tal:condition="isHomepage">
+			<a href="http://www.ox.ac.uk">
+				<img src="/static/assets/logo-oxford.png" alt="University of Oxford." />
+			</a>
+		</div> 
+
+		<div class="links"> 
+			<ul> 
+				<li><a href="#" title="Sitemap" accesskey="3"
+				            tal:attributes="href string:${context/portal_url}/sitemap"
+				            >Sitemap</a></li> 
+				<li><a href="#" title="Terms and Conditions"
+				            tal:attributes="href string:${context/portal_url}/terms-and-conditions"
+				            >Terms &amp; Conditions</a></li> 
+				<li class="last"><a href="#" title="Accessibility statement" accesskey="0"
+				                               tal:attributes="href string:${context/portal_url}/accessibility-info"
+				                               >Accessibility statement</a></li> 
+				<tal:modified condition="not:isHomepage"
+				                      define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+				    <li class="update">Page last updated: 
+				        <span tal:replace="python:toLocalizedTime(context.ModificationDate())">22 June 2010</span></li> 
+				</tal:modified>
+			</ul> 
+		</div> 
+
+	</div>
+</div>

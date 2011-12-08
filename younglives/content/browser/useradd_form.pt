@@ -1,0 +1,2 @@
+<div tal:replace="structure view/single_add/render|nothing" />
+<div tal:replace="structure view/multi_add/render|nothing" />

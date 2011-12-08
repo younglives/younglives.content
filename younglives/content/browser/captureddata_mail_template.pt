@@ -1,0 +1,19 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:metal="http://xml.zope.org/namespaces/metal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     i18n:domain="younglives.policy" 
+     tal:omit-tag=""
+     tal:define="utool nocall:context/portal_url;
+        portal utool/getPortalObject;
+        charset portal/email_charset|string:utf-8;
+        dummy python:request.RESPONSE.setHeader('Content-Type', 'text/plain;;charset=%s' % charset);"
+>
+Welcome <span tal:replace="options/admin_fullname | nothing" />,
+
+New captured data reports are ready here:
+<span tal:omit-tag="" tal:content="options/captureddata_settings_url | nothing" />
+
+--
+Site Administrator
+</div>

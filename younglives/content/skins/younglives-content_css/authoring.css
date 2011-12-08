@@ -1,0 +1,366 @@
+/* @group Editing area */
+.template-atct_edit .aside {display:none;}
+.template-atct_edit #main #content-holder {width:736px;}
+.template-folder_contents .aside {display:none;}
+.template-folder_contents #main #content-holder {width:736px;}
+.template-sharing .aside {display:none;}
+.template-sharing #main #content-holder {width:736px;}
+.template-manage-content-rules .aside {display:none;}
+.template-manage-content-rules #main #content-holder {width:736px;}
+.template-versions_history_form .aside {display:none;}
+.template-versions_history_form #main #content-holder {width:736px;}
+.portaltype-plone-site  .aside {display:none;}
+.portaltype-plone-site #main #content-holder {width:736px;}
+.template-plone_control_panel #main #content-holder {width:960px;}
+.template-register-user  .aside {display:none;}
+.template-register-user #main #content-holder {width:736px;}
+.template-add-user  .aside {display:none;}
+.template-add-user #main #content-holder {width:736px;}
+.template-update-user  .aside {display:none;}
+.template-update-user #main #content-holder {width:736px;}
+/* exceptions */
+body.template-manage-portlets #main #content-holder {width:492px;}
+body.template-manage-portlets  .aside {display:block;}
+/* @end */
+
+
+/* @group Tabs */
+/* Color differences between the two tab types */
+#edit-bar {
+    background-color:#579EC9; 
+    border:0.25em solid #579EC9;
+    border-style:none solid solid;
+    margin:0 auto -16px;
+    min-height:2em;
+    font-size:12px; 
+    padding-top:0.05em;
+    text-align:left;
+    width:960px;
+    -moz-border-radius-topleft:0;
+    -moz-border-radius-topright:0;
+    -moz-border-radius-bottomleft:0.5em;
+    -moz-border-radius-bottomright:0.5em;
+    -webkit-border-top-right-radius:0;
+    -webkit-border-top-left-radius:0;
+    -webkit-border-bottom-right-radius:0.5em;
+    -webkit-border-bottom-left-radius:0.5em;
+}
+#edit-bar li {display:inline;}
+#content-views {float:left; background-color:#579EC9;}
+#content-views a {border:none; color:#FFF; line-height:2em; padding:0 0.75em; text-decoration:none; margin:0;}
+/* Shared CSS between the two tab types */
+#content-views a {display:inline-block;}
+#content-views a {line-height:2em; padding:0 0.75em; text-decoration:none; border:none; margin:0;}
+#content-views li.selected a {font-weight:bold;}
+#content-views li.selected a, #content-views li a:hover {background:White; color:Black;}
+#content-views li.selected a, #content-views li a:hover {
+    -moz-border-radius-topleft:0;
+    -moz-border-radius-topright:0;
+    -moz-border-radius-bottomleft:0.5em;
+    -moz-border-radius-bottomright:0.5em;
+    -webkit-border-top-right-radius:0;
+    -webkit-border-top-left-radius:0;
+    -webkit-border-bottom-right-radius:0.5em;
+    -webkit-border-bottom-left-radius:0.5em;
+}
+/* @end */
+
+
+/* @group Content pulldowns */
+#contentActionMenus dl.actionMenu a {border-bottom:1px solid #579EC9; padding:0 2px;}
+#contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {background-color:#579EC9; color:White; z-index:5;}
+#contentActionMenus dl.actionMenu.activated dd {border-bottom:0.5em solid #579EC9; margin-top:-3px; padding-top:3px; right:-3px;}
+#contentActionMenus dl.actionMenu.activated dd a:hover, #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+    background-color:White !important;
+    color:#666;
+}
+#contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu div {line-height:2em;}
+#folderHeader, #contextHeader {border-bottom:2px solid white;}
+#contextHeader {margin-top:5px; }
+#contentActionMenus {
+    float:right;
+    background:#579EC9;
+    margin:0;
+    position:relative;
+    top:0;
+    right:-0.24em;
+    padding:0.1em 0.24em 0 0;
+    border-radius:0.5em;
+    border-top-left-radius:0;
+    -webkit-border-radius:0.5em;
+    -webkit-border-top-left-radius:0;
+    -moz-border-radius:0.5em;
+    -moz-border-radius-topleft:0;
+}
+#contentActionMenus a:hover {text-decoration:none;}
+.actionMenuContent {padding:0 0.25em;}
+dl.actionMenu {float:right; white-space:nowrap; position:relative; margin-left:0.5em; margin-bottom:0;}
+dl.actionMenu a, dl.actionMenu div {display:block !important; white-space:nowrap;}
+dl.actionMenu dt {font-weight:normal; margin-top:0;}
+span.arrowDownAlternative {font-size:80%;}
+dl.actionMenu.deactivated dt {margin:0 0.25em;}
+dl.actionMenu.deactivated dd {display:none;}
+dl.actionMenu.activated dd {
+    position:absolute;
+    width:auto;
+    min-width:100%;
+    border-bottom-right-radius:0.5em;
+    border-bottom-left-radius:0.5em;
+    -webkit-border-bottom-right-radius:0.5em;
+    -webkit-border-bottom-left-radius:0.5em;
+    -moz-border-radius-bottomleft:0.5em;
+    -moz-border-radius-bottomright:0.5em;
+}
+dl.actionMenu.activated dt a, dl.actionMenu.activated dd a, dl.actionMenu.activated dd div {margin:0 0.25em;}
+/* @end */
+
+
+/* @group Archetypes */
+#archetypes-fieldname-title input {
+    font-family:"Helvetica Neue", Arial, FreeSans, sans-serif;
+    line-height:125%;
+    color:Black;
+    letter-spacing:-0.05em;
+    margin:inherit -0.05em;
+    font-size:2em; /* 26px equiv */
+    font-weight:bold;
+}
+#archetypes-fieldname-description textarea#description {
+    font-family:Arial,FreeSans,sans-serif;
+    color:#666666;
+    font-size:1.25em;
+    font-weight:bold;
+}
+input#subtitle {width:100%;}
+#archetypes-fieldname-subtitle input {
+    color:Black;
+    font-family:"Helvetica Neue",Arial,FreeSans,sans-serif;
+    font-size:1.4em;
+    font-weight:bold;
+    letter-spacing:-0.05em;
+    line-height:125%;
+}
+.ArchetypesReferenceBrowserWidget  li {list-style:none;}
+.ArchetypesImageWidget div.field img {padding-right:6px; vertical-align:text-top;}
+/* collection table */
+#archetypes-fieldname-customViewFields table td {border:none;}
+/* @end  */ 
+
+
+/* @group Core content type sprites */
+#plone-contentmenu-factories .contenttype-audio, 
+.icons-on .contenttype-document, 
+.icons-on .contenttype-event, 
+#plone-contentmenu-factories .contenttype-file, 
+.icons-on .contenttype-folder,
+.icons-on .contenttype-homepage, 
+#plone-contentmenu-factories .contenttype-image, 
+.icons-on .contenttype-link, 
+.icons-on .contenttype-news-item, 
+.icons-on .contenttype-plone-site, 
+.icons-on .contenttype-publication, 
+.icons-on .contenttype-topic {
+    background-color:transparent;
+    background-image:url("++resource++younglives.content.images/contenttypes-sprite16.png"); 
+    background-repeat:no-repeat; 
+    line-height:2em; 
+    display:inline-block; 
+    padding-left:20px !important;
+}
+.contenttype-document {background-position:2px 4px}
+.contenttype-event {background-position:2px -92px}
+.contenttype-folder {background-position:2px -284px}
+.contenttype-homepage {background-position:2px -1052px}
+.contenttype-link {background-position:2px -476px}
+.contenttype-news-item {background-position:2px -572px}
+.contenttype-publication {background-position:2px -860px}
+.contenttype-site {background-position:2px -669px}
+.contenttype-topic {background-position:2px -764px}
+/* file, image and audio only in dropdown */
+.contenttype-audio {line-height:2em;}
+#plone-contentmenu-factories .contenttype-audio {background-position:2px -956px}
+.contenttype-file {line-height:2em;}
+#plone-contentmenu-factories .contenttype-file {background-position:2px -188px}
+.contenttype-image {line-height:2em;}
+#plone-contentmenu-factories .contenttype-image {background-position:2px -380px}
+/* @end */
+
+
+/* @group TinyMCE  */
+span.mceEditor {display:block; margin-bottom:1em;}
+span.ploneSkin table.mceLayout td.mceToolbar {background:#DDDDDD; border:1px solid #666666; border-bottom:none;}
+div#archetypes-fieldname-text {margin-right:0;}
+span.ploneSkin table.mceLayout td.mceToolbar {background-color:#CDE2A7; border:1px solid #74AE0B; border-bottom:none;}
+span.ploneSkin .mceIframeContainer {border:1px solid #74AE0B;}
+span.ploneSkin .mceEditorFocus .mceIframeContainer {background-color:#FFFFFF;}
+span.ploneSkin table.mceLayout td.mceStatusbar {background-color:#FFFFE3; border-color:#74AE0B;}
+div.ploneSkin table.mceListBox .mceText {background-color:#FFFFFF;}
+/* styles selector */
+div.ploneSkin .mceMenu .mceMenuItemEnabled a:hover, 
+div.ploneSkin .mceMenu .mceMenuItemActive,
+div.ploneSkin .mceMenuItemTitle a,
+div.ploneSkin .mceFirst .mceMenuItemTitle a {background-color:#DEE7EC;}
+div.ploneSkin .mceMenu span.mceText {color:#404040;}
+div.ploneSkin .mce_p span.mceText {font-size:14px;}
+div.ploneSkin .mce_h2 span.mceText {color:#837562; font-size:25px; font-weight:normal;}
+div.ploneSkin .mce_h3 span.mceText {color:#837562; font-size:16px; font-weight:bold;}
+div.ploneSkin .mce_h4 span.mceText {color:#837562; font-size:16px; font-weight:normal;}
+div.ploneSkin .mce_h5 span.mceText {font-size:12px; font-weight:bold;}
+div.ploneSkin .mce_blockquote span.mceText {font-size:14px; font-style:italic;}
+/* @end */
+
+
+/* @group Calendar widget  */
+div.calendar {position:relative;}
+.calendar, .calendar table {border:1px solid #556; font-size:11px; color:#000; cursor:default; background:#eef; font-family:tahoma,verdana,sans-serif;}
+/* Header part -- contains navigation buttons and day names. */
+.calendar .button {text-align:center; padding:2px;}
+.calendar .nav {background:#778 url(menuarrow.gif) no-repeat 100% 100%;}
+.calendar thead .title {font-weight:bold; text-align:center; background:#fff; color:#000; padding:2px;}
+.calendar thead .headrow {background:#778; color:#fff;}
+.calendar thead .daynames {background:#bdf;}
+.calendar thead .name {border-bottom:1px solid #556; padding:2px; text-align:center; color:#000;}
+.calendar thead .weekend {color:#a66;}
+.calendar thead .hilite {background-color:#aaf; color:#000; border:1px solid #04f; padding:1px;}
+.calendar thead .active {background-color:#77c; padding:2px 0px 0px 2px;}
+/* The body part -- contains all the days in month. */
+.calendar tbody .day {width:2em; color:#456; text-align:right; padding:2px 4px 2px 2px;}
+.calendar tbody .day.othermonth {font-size:80%; color:#bbb;}
+.calendar tbody .day.othermonth.oweekend {color:#fbb;}
+.calendar table .wn {padding:2px 3px 2px 2px; border-right:1px solid #000; background:#bdf;}
+.calendar tbody .rowhilite td {background:#def;}
+.calendar tbody .rowhilite td.wn {background:#eef;}
+.calendar tbody td.hilite {background:#def; padding:1px 3px 1px 1px; border:1px solid #bbb;}
+.calendar tbody td.active {background:#cde; padding:2px 2px 0px 2px;}
+.calendar tbody td.selected {font-weight:bold; border:1px solid #000; padding:1px 3px 1px 1px; background:#fff; color:#000;}
+.calendar tbody td.weekend {color:#a66;}
+.calendar tbody td.today {font-weight:bold; color:#00f;}
+.calendar tbody .disabled {color:#999;}
+.calendar tbody .emptycell {visibility:hidden;}
+.calendar tbody .emptyrow {display:none;}
+/* The footer part -- status bar and "Close" button */
+.calendar tfoot .footrow {text-align:center; background:#556; color:#fff;}
+.calendar tfoot .ttip {background:#fff; color:#445; border-top:1px solid #556; padding:1px;}
+.calendar tfoot .hilite {background:#aaf; border:1px solid #04f; color:#000; padding:1px;}
+.calendar tfoot .active {background:#77c; padding:2px 0px 0px 2px;}
+/* Combo boxes (menus that display months/years for direct selection) */
+.calendar .combo {position:absolute; display:none; top:0px; left:0px; width:4em; cursor:default; border:1px solid #655; background:#def; color:#000; font-size:90%; z-index:100;}
+.calendar .combo .label, .calendar .combo .label-IEfix {text-align:center; display:block; padding:1px;}
+.calendar .combo .label-IEfix {width:4em;}
+.calendar .combo .hilite {background:#acf;}
+.calendar .combo .active {border-top:1px solid #46a; border-bottom:1px solid #46a; background:#eef; font-weight:bold;}
+.calendar td.time {border-top:1px solid #000; padding:1px 0px; text-align:center; background-color:#f4f0e8;}
+.calendar td.time .hour, .calendar td.time .minute, .calendar td.time .ampm {padding:0px 3px 0px 4px; border:1px solid #889; font-weight:bold; background-color:#fff;}
+.calendar td.time .ampm {text-align:center;}
+.calendar td.time .colon {padding:0px 2px 0px 3px; font-weight:bold;}
+.calendar td.time span.hilite {border-color:#000; background-color:#667; color:#fff;}
+.calendar td.time span.active {border-color:#f00; background-color:#000; color:#0f0;}
+/* @end */
+
+#searchresults dt img {padding:0 4px 0 2px; vertical-align:text-top;}
+
+
+/* -- NOT IN USE CURRENTLY -- */
+
+/* @group Comments */
+.comment {margin-top:1.5em; font-size:80%;}
+.comment .documentByLine {margin-left:1em;}
+.comment .formControls {margin-left:0;}
+.commentTime {color:#666;}
+.commentBody {
+    padding:1em;
+    margin:0.5em 0;
+    border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    -moz-border-radius:0.5em;
+    box-shadow:0 0 1em 0 #888;
+    -moz-box-shadow:0 0 0.5em 0 #888;
+    -webkit-box-shadow:0 0 0.5em #888;
+}
+.comment h1, .comment h2, .comment h3, .comment h4, .comment h5, .comment h6 {font-weight:normal;}
+/* @end */
+
+
+/* @group Collapsible */
+dl.collapsible {border:0.1em solid #8cacbb; margin:1em 0; padding:0;}
+dl.collapsible dt.collapsibleHeader {
+    display:block;
+    float:left;
+    background:White;
+    line-height:1.2em;
+    vertical-align:middle;
+    font-size:90%;
+    position:relative;
+    top:-0.6em;
+    width:auto;
+    margin:0 0 -0.6em 1em;
+    padding:0 0.5em;
+}
+dl.collapsible dd.collapsibleContent {margin:0; padding:0 1em 0.4em; clear:left;}
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl {margin:0; padding:0;}
+dl.expandedInlineCollapsible dt.collapsibleHeader, dl.expandedBlockCollapsible dt.collapsibleHeader {
+    padding:0 0.5em 0 2em;
+    background:White url(treeExpanded.png) no-repeat 0.5em 50%;
+    cursor:pointer;
+}
+dl.collapsedBlockCollapsible {border:none; height:1em; width:auto;}
+dl.collapsedInlineCollapsible dt.collapsibleHeader, dl.collapsedBlockCollapsible dt.collapsibleHeader {
+    float:none;
+    position:relative;
+    margin:0 0 0 1em;
+    padding:0 0.5em 0 2em;
+    line-height:1.2em;
+    cursor:pointer;
+    background:White url(treeCollapsed.png) no-repeat 0.5em 50%;
+}
+dl.collapsedInlineCollapsible dd.collapsibleContent, dl.collapsedBlockCollapsible dd.collapsibleContent {display:none;}
+dl.collapsedInlineCollapsible {border:none; height:1em; width:auto; display:inline;}
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+    position:static;
+    float:none;
+    margin:0;
+    padding:0 0 0 2em;
+    line-height:1em;
+    cursor:pointer;
+    display:inline;
+}
+/* @end */
+
+
+/* @group Dashboard */
+#dashboard-actions ul, #dashboard-actions ul li {list-style:none;}
+#dashboard-actions ul {margin-left:0;}
+#dashboard {font-size:125%; line-height:1em;}
+#dashboard dd {margin:0;}
+#dashboard dl.portlet a:link {border-bottom:none;}
+#dashboard-portlets1, #dashboard-portlets2, #dashboard-portlets3 {float:left; width:23%; padding:0.7em 1.3em 0 0;}
+#dashboard-portlets4 {float:left; width:23%; padding-top:0.7em;}
+#dashboard-portlets1 dl.portlet, #dashboard-portlets2 dl.portlet, #dashboard-portlets3 dl.portlet, #dashboard-portlets4 dl.portlet {margin-bottom:1.5em;}
+/* @end */
+
+
+/* @group Content History */
+#content-history #history dd {}
+#content-history div.historyRecord {margin-bottom:1em;}
+#content-history div.historyTools ul {float:right; margin:0.5em 1em;}
+#content-history div.historyTools ul li {display:inline; padding:0 0.015em;}
+#content-history div.historyTools ul li a{border-bottom:none;}
+#content-history div.historyTools form {display:inline;}
+#content-history .historyAction {}
+#content-history .historyByLine {
+    background:#ddd;
+    padding:0.5em;
+    border-top-right-radius:0.5em;
+    border-top-left-radius:0.5em;
+    -webkit-border-top-right-radius:0.5em;
+    -webkit-border-top-left-radius:0.5em;
+    -moz-border-radius-topleft:0.5em;
+    -moz-border-radius-topright:0.5em;
+}
+#content-history div.historyLinks {float:right; clear:right; margin:0.5em 1em 0 0;}
+#content-history div.historyComment {padding:0.5em 1em; border:1px solid #ddd;}
+#content-history div.historyComment p {margin:0; padding-top:1px;}
+#content-history a.historyComparePrevious {border-top:1px dotted #ccc; display:block; margin-top:3em; text-align:center;}
+#content-history a.historyComparePrevious span {background-color:white; position:relative; top:-0.75em; padding:0 0.5em;}
+/* @end */

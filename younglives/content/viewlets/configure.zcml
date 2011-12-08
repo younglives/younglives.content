@@ -1,0 +1,39 @@
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="younglives.policy">
+    
+    <!-- global sections -->
+    <browser:viewlet
+        name="younglives.globalsections"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.YoungLivesGlobalSectionsViewlet"
+        layer="younglives.content.interfaces.IYoungLivesContentLayer"
+        permission="zope2.View" />
+        
+    <!-- overwrites skip links for accessibility -->
+    <browser:viewlet
+        name="plone.skip_links"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.SkipLinksViewlet"
+        layer="younglives.content.interfaces.IYoungLivesContentLayer"
+        template="skip_links.pt"
+        permission="zope2.View" />
+
+    <browser:viewlet
+        name="younglives.quota"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+		for="younglives.content.interfaces.IQuoteAware"
+		template="quote.pt"
+        layer="younglives.content.interfaces.IYoungLivesContentLayer"
+        permission="zope2.View" />
+        
+    <browser:viewlet
+        name="younglives.footer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".viewlets.FooterViewlet"
+		template="footer.pt"
+        layer="younglives.content.interfaces.IYoungLivesContentLayer"
+        permission="zope2.View" />
+
+</configure>

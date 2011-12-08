@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="younglives.policy">
+        
+    <adapter
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        factory=".group_manager.GroupManager" />
+        
+    <adapter
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        factory=".user_storage.UserStorage" />
+        
+    <adapter
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        factory=".captureddata_storage.CapturedDataStorage" />
+        
+    <adapter
+        for="*"
+        factory=".mail_sender.MailSender" />
+	
+</configure>

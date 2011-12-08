@@ -1,0 +1,84 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<metal:block fill-slot="column_two_slot" />
+    
+<metal:header fill-slot="header">
+    <div id="younglives-view-modifier"><!-- --></div>
+</metal:header>
+
+<metal:javascript fill-slot="javascript_head_slot">
+    <script type="text/javascript">
+        jq(document).ready(function()
+        {
+            jq("input.checkall").click(function()
+            {
+                parent_table = jq(this).closest('table.listing')
+                var checked_status = this.checked;
+                jq("td input:checkbox", parent_table).each(function()
+                {
+                    this.checked = checked_status;
+                });
+            });
+         });
+    </script>
+</metal:javascript>
+
+<body>
+
+<div metal:fill-slot="main">
+
+    <tal:users define="pending view/pending;
+                       editors view/editors;
+                       viewers view/viewers">
+
+    <dl tal:define="status view/info_status"
+        tal:condition="status"
+        class="portalMessage info">
+        <dt>Info</dt>
+        <dd tal:content="status" />
+    </dl>
+    
+    <dl tal:define="status view/error_status"
+        tal:condition="status"
+        class="portalMessage error">
+        <dt>Error</dt>
+        <dd tal:content="status" />
+    </dl>
+    
+    <div><h2>Intranet users management</h2></div>
+    <div>
+        <p class="discreet">You can approve or reject pending users and assign them to one of two groups: viewers or editors.</p>
+        <p><a href="#" title="Add user" class="user-add-icon"
+              tal:attributes="href string:${context/portal_url}/intranet/add-user">Add new user</a>
+              &nbsp;
+           <a href="#" title="Export users" class="users-export-icon"
+              tal:attributes="href string:${context/absolute_url}/intranet/export-users">Export users to CSV file</a>
+        </p>
+    </div>
+    
+    
+    <div>
+        <form action="."
+              tal:attributes="action request/URL;"
+              method="post"
+              class="enableFormTabbing">
+            <metal:pending use-macro="context/@@users-settings-macros/pending" />
+            <metal:pending use-macro="context/@@users-settings-macros/viewers" />
+            <metal:pending use-macro="context/@@users-settings-macros/editors" />
+            <input type="hidden" name="form.submitted" value="1" />
+            <input tal:replace="structure context/@@authenticator/authenticator" />
+        </form>
+    </div>
+    
+    </tal:users>
+
+</div>
+
+</body>
+</html>
