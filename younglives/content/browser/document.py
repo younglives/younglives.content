@@ -17,7 +17,10 @@ class DocumentView(BrowserView):
         ptool = getToolByName(self.context, 'plone_utils')
         parent = getattr(self.context, '__parent__', aq_parent(self.context)) 
         if ptool.isDefaultPage(self.context):
-            banner_field = parent.getField("bannerImage")
+            try:
+                banner_field = parent.getField("bannerImage")
+            except AttributeError:
+                return None
             if banner_field:
                 return banner_field.get(parent)
         return None
