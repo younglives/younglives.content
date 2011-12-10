@@ -164,13 +164,6 @@ jQuery(function($){
         }
     );
 
-    // Content history popup
-    $('#content-history a').prepOverlay({
-       subtype: 'ajax', 
-       urlmatch: '@@historyview',
-       urlreplace: '@@contenthistorypopup'
-    });
-    
     // capture data form
     $('a.capturePopup').prepOverlay(
         {
