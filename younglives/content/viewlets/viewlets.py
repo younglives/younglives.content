@@ -72,8 +72,11 @@ class FooterViewlet(ViewletBase):
 
     def footer_image(self):
         homepage = self.getHomePage()
-        return homepage.getHomeFooterImage()
-        
+        try:
+            return homepage.getHomeFooterImage()
+        except AttributeError:
+            return None
+
     def getHomeBoxes(self):
         items = []
         homepage = self.getHomePage()
