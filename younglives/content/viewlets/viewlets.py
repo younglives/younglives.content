@@ -58,7 +58,9 @@ class FooterViewlet(ViewletBase):
     
     def boxes(self):
         homepage = self.getHomePage()
-        
+        if homepage is None:
+            # don't blow up if there is no hompage
+            return
         wtool = getToolByName(self.context, 'portal_workflow')
         results = []
         for box in ["1","2","3"]:
