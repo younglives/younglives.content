@@ -12,7 +12,7 @@ from zope.component import getMultiAdapter
 from Products.ATContentTypes.interface import IATTopic
 from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone import Batch
+from Products.CMFPlone.PloneBatch import Batch
 from plone.app.layout.icons.interfaces import IContentIcon
 from plone.memoize import view
 
