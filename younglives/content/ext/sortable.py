@@ -13,15 +13,13 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 # local
 from younglives.content.interfaces import IYoungLivesContentLayer
 from younglives.content.interfaces import ISortableAware
-from younglives.policy.i18n import younglivesMessageFactory as _
-
+from younglives.policy import _
 
 LISTING_INDEXES_TO_SORT_ON = atapi.DisplayList((
     ('Date', 'Date'),
     ('start', 'Event start date'),
     ('getObjPositionInParent', 'Position in folder'),
     ('getId', 'Title'),))
-
 
 class ExtStringField(ExtensionField, atapi.LinesField):
     """ A String field.  """

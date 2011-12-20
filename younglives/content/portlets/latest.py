@@ -29,8 +29,7 @@ from Products.ATContentTypes.interface.document import IATDocument
 from Products.ATContentTypes.interface.image import IATImage
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
-
+from younglives.policy import _
 
 class ILatestItemsPortlet(IPortletDataProvider):
     """ A portlet which shows latest items. """

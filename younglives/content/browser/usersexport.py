@@ -12,10 +12,9 @@ from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
+from younglives.policy import _
 from younglives.content.interfaces import IGroupManager, IUserStorage, \
     IUserProfile
-
 
 class UsersExportView(BrowserView):
 

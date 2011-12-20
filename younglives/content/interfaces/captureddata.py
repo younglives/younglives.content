@@ -6,8 +6,7 @@ from zope import schema
 from zope.interface import Interface
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
-
+from younglives.policy import _
 
 class ICapturedData(Interface):
     """ A helper interface used to build form fields """

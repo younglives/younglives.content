@@ -25,15 +25,13 @@ from plone.app.vocabularies.catalog import IContextSourceBinder, \
   SearchableTextSource
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
+from younglives.policy import _
 from younglives.content.interfaces import IGalleryContainerMarker
-
 
 def RadioWidget(field, request):
     vocabulary = field.vocabulary
     widget = _RadioWidget(field, vocabulary, request)
     return widget
-
 
 class GallerySourceBinder:
 

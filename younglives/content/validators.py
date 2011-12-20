@@ -1,6 +1,5 @@
 """ Custom validators for content types fields. """
 
-
 # Python
 from PIL import Image
 from types import ListType, TupleType
@@ -12,8 +11,7 @@ from zope.interface import implements
 from Products.validation.interfaces.IValidator import IValidator
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
-
+from younglives.policy import _
 
 def validateImageSize(imageWidth, imageHeight, validSizes):
     """ Validate images size and return boolean value.

@@ -18,18 +18,15 @@ from Products.CMFCore.utils import getToolByName
 from Products.statusmessages.interfaces import IStatusMessage
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
+from younglives.policy import _
 from younglives.content.interfaces import IGroupManager, IUserStorage
 from younglives.content.interfaces import IUserAddProfile, IUserMultiAddProfile
 from younglives.content.interfaces import IMailSender
 
-
 logger = logging.getLogger('younglives.useradd')
-    
-    
+
 class IMultiForm(Interface):
     """ A markup interface for form with subforms. """
-
 
 class UserSingleAddForm(form.AddForm):
     template = ViewPageTemplateFile('useraddsingle_form.pt')

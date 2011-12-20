@@ -16,13 +16,11 @@ from Products.CMFCore import permissions
 from plone.memoize import view
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
+from younglives.policy import _
 from younglives.content.interfaces import IUserProfile, IUserPassword
-
 
 class IMultiForm(Interface):
     """ A markup interface for form with subforms. """
-
 
 def resolveUser(self):
     username = self.request.get('username')

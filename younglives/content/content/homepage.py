@@ -16,7 +16,7 @@ from Products.OrderableReferenceField import \
      OrderableReferenceField, OrderableReferenceWidget
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
+from younglives.policy import _
 from younglives.content.interfaces import IHomePage
 from younglives.content.interfaces import IHomepageBoxMarker, IHomepageHeroMarker
 from younglives.content.config import *

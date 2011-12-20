@@ -19,7 +19,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.statusmessages.interfaces import IStatusMessage
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
+from younglives.policy import _
 from younglives.content.config import *
 from younglives.content.interfaces import ICapturedData, ICapturedDataStorage
 

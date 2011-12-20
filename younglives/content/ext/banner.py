@@ -13,12 +13,10 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 # local
 from younglives.content.interfaces import IBannerAware
 from younglives.content.interfaces import IYoungLivesContentLayer
-from younglives.policy.i18n import younglivesMessageFactory as _
-
+from younglives.policy import _
 
 class ExtImageField(ExtensionField, atapi.ImageField):
     """ An Image field.  """
-       
 
 class BannerExtender(object):
     """ Adding new fields:

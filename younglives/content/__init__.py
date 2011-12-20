@@ -1,6 +1,5 @@
 """ Main product initializer. """
 
-
 # Plone
 from Products.Archetypes import atapi
 from Products.CMFCore import utils as cmfutils
@@ -14,6 +13,9 @@ from younglives.content import config
 from validators import ImageSizeValidator
 validation.register(ImageSizeValidator('checkImageSize'))
 
+from zope.i18nmessageid import MessageFactory
+
+_ = MessageFactory('younglives.content')
 
 def initialize(context):
     """Initializer called when used as a Zope 2 product.

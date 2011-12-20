@@ -13,8 +13,7 @@ from Products.CMFCore.utils import getToolByName
 
 # local
 from younglives.content.interfaces import IPublication
-from younglives.policy.i18n import younglivesMessageFactory as _
-
+from younglives.policy import _
 
 EVENTS = "Event"
 NEWS = "News Item"

@@ -13,12 +13,10 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 # local
 from younglives.content.interfaces import IYoungLivesContentLayer 
 from younglives.content.interfaces import IQuoteAware
-from younglives.policy.i18n import younglivesMessageFactory as _
-
+from younglives.policy import _
 
 class ExtStringField(ExtensionField, atapi.StringField):
     """A string field  """
-    
 
 class QuoteExtender(object):
     """ New fields:

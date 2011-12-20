@@ -13,8 +13,7 @@ from Products.CMFDefault.utils import checkEmailAddress
 from Products.CMFDefault.exceptions import EmailAddressInvalid
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
-
+from younglives.policy import _
 
 # email validation
 class InvalidEmailAddress(schema.ValidationError):
