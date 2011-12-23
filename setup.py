@@ -13,9 +13,9 @@ setup(name='younglives.content',
         "Framework :: Plone",
         "Programming Language :: Python",
         ],
-      keywords='',
-      author='',
-      author_email='',
+      keywords='Content for Young Lives website',
+      author='Michael Davis',
+      author_email='M.R.Davis@cranfield.ac.uk',
       url='http://svn.plone.org/svn/collective/',
       license='gpl',
       packages=find_packages(exclude=['ez_setup']),
@@ -26,6 +26,11 @@ setup(name='younglives.content',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
+      extras_require = {
+            'test': [
+                    'plone.app.testing',
+                ]
+      },
       entry_points="""
       # -*- Entry points: -*-
 
