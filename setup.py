@@ -1,15 +1,14 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = open(os.path.join("younglives", "content", "version.txt")).read().strip()
 
 setup(name='younglives.content',
       version=version,
       description="",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open(os.path.join("docs", "README.txt")).read() + "\n" +
+                       open(os.path.join("docs", "INSTALL.txt")).read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from
-      # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
@@ -33,6 +32,4 @@ setup(name='younglives.content',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
-      )
+)
