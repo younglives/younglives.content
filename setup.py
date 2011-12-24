@@ -24,7 +24,7 @@ setup(name='younglives.content',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
+          'Products.PloneKeywordManager',
       ],
       extras_require = {
             'test': [
