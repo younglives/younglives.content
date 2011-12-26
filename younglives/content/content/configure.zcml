@@ -4,37 +4,37 @@
     i18n_domain="younglives.policy">
     
     <!--  ********** Extenders ********** -->
-	
-    <five:implements
-        class="Products.ATContentTypes.atct.ATFolder"
-        interface="younglives.content.interfaces.IGalleryContainerAware" />
-        
-    <five:implements
-        class="Products.ATContentTypes.atct.ATFolder"
-        interface="younglives.content.interfaces.IBannerAware" />
-        
-    <five:implements
-        class="Products.ATContentTypes.atct.ATFolder"
-        interface="younglives.content.interfaces.ISortableAware" />
-        
-    <five:implements
-        class="Products.ATContentTypes.atct.ATTopic"
-        interface="younglives.content.interfaces.IBannerAware" />
-        
-    <five:implements
-        class="Products.ATContentTypes.atct.ATTopic"
-        interface="younglives.content.interfaces.IHomepageBoxAware" />
 
-    <five:implements
-        class="Products.ATContentTypes.atct.ATDocument"
-        interface="younglives.content.interfaces.IHomepageHeroAware" />
+    <class class="Products.ATContentTypes.atct.ATFolder">
+        <implements interface="younglives.content.interfaces.IGalleryContainerAware" />
+    </class>
 
-    <five:implements
-        class="Products.ATContentTypes.atct.ATDocument"
-        interface="younglives.content.interfaces.IQuoteAware" />
-        
-    <five:implements
-        class="Products.ATContentTypes.atct.ATDocument"
-        interface="younglives.content.interfaces.ICategoriesAware" />
+    <class class="Products.ATContentTypes.atct.ATFolder">
+        <implements interface="younglives.content.interfaces.IBannerAware" />
+    </class>
+
+    <class class="Products.ATContentTypes.atct.ATFolder">
+        <implements interface="younglives.content.interfaces.ISortableAware" />
+    </class>
+
+    <class class="Products.ATContentTypes.atct.ATTopic">
+        <implements interface="younglives.content.interfaces.IBannerAware" />
+    </class>
+
+    <class class="Products.ATContentTypes.atct.ATTopic">
+        <implements interface="younglives.content.interfaces.IHomepageBoxAware" />
+    </class>
+
+    <class class="Products.ATContentTypes.atct.ATDocument">
+        <implements interface="younglives.content.interfaces.IHomepageHeroAware" />
+    </class>
+
+    <class class="Products.ATContentTypes.atct.ATDocument">
+        <implements interface="younglives.content.interfaces.IQuoteAware" />
+    </class>
+
+    <class class="Products.ATContentTypes.atct.ATDocument">
+        <implements interface="younglives.content.interfaces.ICategoriesAware" />
+    </class>
 
 </configure>
