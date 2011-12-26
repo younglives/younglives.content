@@ -5,15 +5,15 @@
     
     <!--  ********** Extenders ********** -->
 
-    <class class="Products.ATContentTypes.atct.ATFolder">
+    <class class="plone.app.folder.folder.ATFolder">
         <implements interface="younglives.content.interfaces.IGalleryContainerAware" />
     </class>
 
-    <class class="Products.ATContentTypes.atct.ATFolder">
+    <class class="plone.app.folder.folder.ATFolder">
         <implements interface="younglives.content.interfaces.IBannerAware" />
     </class>
 
-    <class class="Products.ATContentTypes.atct.ATFolder">
+    <class class="plone.app.folder.folder.ATFolder">
         <implements interface="younglives.content.interfaces.ISortableAware" />
     </class>
 
