@@ -8,6 +8,7 @@
   <five:registerPackage package="." initialize=".initialize" />
 
   <include package=".ext" />
+  <include package=".portlets" />
 
   <genericsetup:registerProfile
       name="default"
