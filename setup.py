@@ -26,6 +26,7 @@ setup(name='younglives.content',
           'setuptools',
           'Products.PloneKeywordManager',
           'archetypes.markerfield',
+          'Products.AdvancedQuery',
       ],
       extras_require = {
             'test': [
