@@ -25,6 +25,7 @@ setup(name='younglives.content',
       install_requires=[
           'setuptools',
           'Products.PloneKeywordManager',
+          'archetypes.markerfield',
       ],
       extras_require = {
             'test': [
