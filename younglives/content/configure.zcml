@@ -7,6 +7,8 @@
 
   <five:registerPackage package="." initialize=".initialize" />
 
+  <include package=".ext" />
+
   <genericsetup:registerProfile
       name="default"
       title="younglives.content"
@@ -14,6 +16,5 @@
       description="Installs the younglives.content package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- -*- extra stuff goes here -*- -->
   
 </configure>
