@@ -23,7 +23,7 @@ class BannerExtender(object):
     
     banner -- banner image for folders
     """
-        
+
     adapts(IBannerAware)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
 
