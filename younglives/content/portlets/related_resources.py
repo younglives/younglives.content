@@ -19,7 +19,7 @@ from Products.AdvancedQuery import In, And, Not, Eq, Or
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 # local
-from younglives.policy import _
+from younglives.content import _
 
 logger = logging.getLogger('younglives.RelatedResourcesPortlet')
 

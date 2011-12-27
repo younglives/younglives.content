@@ -14,7 +14,7 @@ from plone.memoize.instance import memoize
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 # local
-from younglives.policy import _
+from younglives.content import _
 
 class IKeyResourcesPortlet(IPortletDataProvider):
     """ A portlet which shows context key resources. """

@@ -13,7 +13,7 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 # local
 from younglives.content.interfaces import IBannerAware
 from younglives.content.browser.interfaces import IYounglivesContent
-from younglives.policy import _
+from younglives.content import _
 
 class ExtImageField(ExtensionField, atapi.ImageField):
     """ An Image field.  """

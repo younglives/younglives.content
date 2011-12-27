@@ -19,7 +19,7 @@ from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content.interfaces import IHomePage
 from younglives.content.interfaces import IGalleryReferenceAware, \
     IGalleryContainerAware, IGalleryContainerMarker
-from younglives.policy import _
+from younglives.content import _
 
 class ExtReferenceField(ExtensionField, atapi.ReferenceField):
     """ A reference field  """

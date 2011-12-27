@@ -13,7 +13,7 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 # local
 from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content.interfaces import ISortableAware
-from younglives.policy import _
+from younglives.content import _
 
 LISTING_INDEXES_TO_SORT_ON = atapi.DisplayList((
     ('Date', 'Date'),

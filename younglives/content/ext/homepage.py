@@ -19,7 +19,7 @@ from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content.interfaces import IHomePage
 from younglives.content.interfaces import IHomepageHeroAware, \
     IHomepageHeroMarker, IHomepageBoxAware, IHomepageBoxMarker
-from younglives.policy import _
+from younglives.content import _
     
 class ExtHeroImageField(ExtensionField, atapi.ImageField):
     """A image field  """

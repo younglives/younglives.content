@@ -25,7 +25,7 @@ from plone.app.vocabularies.catalog import IContextSourceBinder, \
   SearchableTextSource
 
 # local
-from younglives.policy import _
+from younglives.content import _
 from younglives.content.interfaces import IGalleryContainerMarker
 
 def RadioWidget(field, request):

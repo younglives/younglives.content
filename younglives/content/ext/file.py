@@ -14,7 +14,7 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 
 # local
 from younglives.content.browser.interfaces import IYounglivesContent
-from younglives.policy import _
+from younglives.content import _
 
 DOCUMENT_TYPES = atapi.DisplayList((
     ('full text', 'Full text'),   

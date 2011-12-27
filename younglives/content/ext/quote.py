@@ -13,7 +13,7 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 # local
 from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content.interfaces import IQuoteAware
-from younglives.policy import _
+from younglives.content import _
 
 class ExtStringField(ExtensionField, atapi.StringField):
     """A string field  """
