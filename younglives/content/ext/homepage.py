@@ -15,7 +15,7 @@ from archetypes.markerfield import InterfaceMarkerField
 from archetypes.markerfield.utils import addMarkerInterface, removeMarkerInterface
 
 # local
-from younglives.content.interfaces import IYoungLivesContentLayer 
+from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content.interfaces import IHomePage
 from younglives.content.interfaces import IHomepageHeroAware, \
     IHomepageHeroMarker, IHomepageBoxAware, IHomepageBoxMarker
@@ -42,7 +42,7 @@ class HomepageHeroExtender(object):
     adapts(IHomepageHeroAware)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
 
-    layer = IYoungLivesContentLayer
+    layer = IYounglivesContent
 
     fields = [
               

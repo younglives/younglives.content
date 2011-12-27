@@ -11,7 +11,7 @@ from archetypes.schemaextender.interfaces import ISchemaExtender
 from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 
 # local
-from younglives.content.interfaces import IYoungLivesContentLayer
+from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content.interfaces import ISortableAware
 from younglives.policy import _
 
@@ -35,7 +35,7 @@ class SortableExtender(object):
     adapts(ISortableAware)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
 
-    layer = IYoungLivesContentLayer
+    layer = IYounglivesContent
 
     fields = [
 

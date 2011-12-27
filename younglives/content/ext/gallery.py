@@ -15,7 +15,7 @@ from archetypes.markerfield import InterfaceMarkerField
 from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
 
 # local
-from younglives.content.interfaces import IYoungLivesContentLayer
+from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content.interfaces import IHomePage
 from younglives.content.interfaces import IGalleryReferenceAware, \
     IGalleryContainerAware, IGalleryContainerMarker
@@ -34,7 +34,7 @@ class GalleryReferenceExtender(object):
     adapts(IGalleryReferenceAware)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
 
-    layer = IYoungLivesContentLayer
+    layer = IYounglivesContent
 
     fields = [ 
 

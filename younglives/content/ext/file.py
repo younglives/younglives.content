@@ -13,7 +13,7 @@ from archetypes.schemaextender.interfaces import ISchemaExtender
 from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 
 # local
-from younglives.content.interfaces import IYoungLivesContentLayer
+from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.policy import _
 
 DOCUMENT_TYPES = atapi.DisplayList((
@@ -35,7 +35,7 @@ class FileExtender(object):
     adapts(IATFile)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
 
-    layer = IYoungLivesContentLayer
+    layer = IYounglivesContent
 
     fields = [
               
