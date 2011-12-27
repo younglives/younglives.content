@@ -95,7 +95,7 @@ class HomepageBoxExtender(object):
     adapts(IHomepageBoxAware)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
 
-    layer = IYoungLivesContentLayer
+    layer = IYounglivesContent
 
     fields = [
               

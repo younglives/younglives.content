@@ -1,17 +1,8 @@
 """ Interfaces for browser views. """
 
-
 # Zope
 from zope.interface import Interface
 
-# Plone
-from plone.theme.interfaces import IDefaultPloneLayer
-
-
-class IYoungLivesContentLayer(IDefaultPloneLayer):
-    """ Marker interface that defines a Zope 3 browser layer. """
-    
-    
 #===============================================================================
 # content types views
 #===============================================================================

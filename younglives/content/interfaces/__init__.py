@@ -11,5 +11,4 @@ from content import IGalleryContainerAware
 from content import IGalleryContainerMarker
 from content import ISortableAware
 from content import ICategoriesAware
-from browser import IYoungLivesContentLayer
 from browser import IWhoWeAreFolderMarker
