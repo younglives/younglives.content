@@ -69,7 +69,7 @@ class GalleryContainerExtender(object):
     adapts(IGalleryContainerAware)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
 
-    layer = IYoungLivesContentLayer
+    layer = IYounglivesContent
 
     fields = [ 
 
