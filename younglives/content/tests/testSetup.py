@@ -19,6 +19,11 @@ class TestInstallation(unittest.TestCase):
     def setUp(self):
         self.portal = self.layer['portal']
 
+    def testBrowserLayerRegistered(self):
+        sm = getSiteManager(self.portal)
+        layers = [o.__name__ for o in registered_layers()]
+        assert 'IYounglivesContent' in layers
+
 class TestReinstall(unittest.TestCase):
     """Ensure product can be reinstalled safely"""
     layer = INTEGRATION_TESTING
