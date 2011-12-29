@@ -12,6 +12,9 @@
   <include package=".content" />
   <include package=".portlets" />
 
+  <utility factory=".vocabularies.LatestItemsAvailableTypes"
+      name="younglives.content.LatestItemsAvailableTypes" />
+
   <genericsetup:registerProfile
       name="default"
       title="younglives.content"
