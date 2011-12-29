@@ -12,7 +12,7 @@ from zope.interface import implements
 from Products.validation.interfaces.IValidator import IValidator
 
 # local
-from younglives.policy.i18n import younglivesMessageFactory as _
+from younglives.content import _
 
 
 def validateImageSize(imageWidth, imageHeight, validSizes):
