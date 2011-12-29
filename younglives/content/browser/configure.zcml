@@ -3,4 +3,14 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="younglives.content">
 
+    <browser:defaultView 
+        for="younglives.content.interfaces.IPublication"
+        name="publication_view" />
+    <browser:page 
+        for="younglives.content.interfaces.IPublication"
+        name="publication_view"
+        class=".publication.PublicationView"
+        template="publication.pt"
+        permission="zope.Public" />
+
 </configure>

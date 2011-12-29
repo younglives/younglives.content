@@ -13,3 +13,4 @@ from content import IGalleryContainerMarker
 from content import ISortableAware
 from content import ICategoriesAware
 from browser import IWhoWeAreFolderMarker
+from browser import IPublicationView
