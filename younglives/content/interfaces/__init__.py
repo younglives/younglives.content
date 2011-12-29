@@ -6,6 +6,7 @@ from content import ISiteTabMarker
 from content import IBannerAware
 from content import IQuoteAware
 from content import IHomePage
+from content import IPublication
 from content import IGalleryReferenceAware
 from content import IGalleryContainerAware
 from content import IGalleryContainerMarker
