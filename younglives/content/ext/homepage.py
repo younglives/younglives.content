@@ -16,7 +16,7 @@ from archetypes.markerfield.utils import addMarkerInterface, removeMarkerInterfa
 
 # local
 from younglives.content.browser.interfaces import IYounglivesContent
-from younglives.content.interfaces import IHomePage
+from younglives.homepage.interfaces import IHomePage
 from younglives.content.interfaces import IHomepageHeroAware, \
     IHomepageHeroMarker, IHomepageBoxAware, IHomepageBoxMarker
 from younglives.content import _
