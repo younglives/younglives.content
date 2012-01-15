@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="younglives.content">
+
+    <!-- Document -->
+    <browser:defaultView 
+        for="Products.ATContentTypes.interface.IATDocument"
+        name="document_view" />
+    <browser:page 
+        for="Products.ATContentTypes.interface.IATDocument"
+        name="document_view"
+        class=".document.DocumentView"
+        template="document_item.pt"
+        permission="zope.Public" />  
+
+</configure>

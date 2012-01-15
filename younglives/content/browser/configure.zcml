@@ -13,4 +13,6 @@
         template="publication.pt"
         permission="zope.Public" />
 
+    <include package=".templates" />
+
 </configure>
