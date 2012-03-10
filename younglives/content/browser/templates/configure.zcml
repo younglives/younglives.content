@@ -14,4 +14,9 @@
         template="document_item.pt"
         permission="zope.Public" />  
 
+    <!-- Folder -->
+    <browser:page for="*"
+        name="listing" class=".folder_listing.FolderListingView"
+        template="folder_listing.pt" permission="zope2.View" />
+
 </configure>
