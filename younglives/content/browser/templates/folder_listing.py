@@ -3,7 +3,6 @@
 # Python
 import logging
 
-
 # Zope
 from zope.interface import implements
 from zope.component import getMultiAdapter
@@ -12,26 +11,25 @@ from zope.component import getMultiAdapter
 from Products.ATContentTypes.interface import IATTopic
 from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone import Batch
+from Products.CMFPlone.PloneBatch import Batch
 from plone.app.layout.icons.interfaces import IContentIcon
 from plone.memoize import view
 
 # local
-from younglives.content.interfaces import IFolderListingView
-
+from younglives.content.interfaces.browser import IFolderListingView
 
 logger = logging.getLogger('younglives.folderlisting')
 
 class FolderListingView(BrowserView):
     implements(IFolderListingView)
-    
+
     @view.memoize
     def banner(self):
         banner_field = self.context.getField("bannerImage")
         if banner_field:
             return banner_field.get(self.context)
         return None
-    
+
     @view.memoize
     def items(self):
         catalog = getToolByName(self, 'portal_catalog')
@@ -54,12 +52,11 @@ class FolderListingView(BrowserView):
             items = catalog.searchResults(path = {'query':path, 'depth':1},
                                           sort_on = sort_on,
                                           sort_order = sort_order)
-            
+
         b_start = self.request.get('b_start', 0)
         return Batch(items, 20, int(b_start), orphan=0)
-        
+
     def snippet(self, brain):
         obj = brain.getObject()
         render =  getMultiAdapter( (obj, self.request), name="listing_snippet")
         return render()
-        
