@@ -19,4 +19,35 @@
         name="listing" class=".folder_listing.FolderListingView"
         template="folder_listing.pt" permission="zope2.View" />
 
+    <!-- Snippet views for Folder listing view -->
+    <browser:page
+        for="Products.ATContentTypes.interfaces.IATContentType"
+        name="listing_snippet"
+        template="listing_base.pt"
+        permission="zope2.View"
+    />
+<!--
+    <browser:page
+        for="younglives.content.interfaces.IPublication"
+        name="listing_snippet"
+        class=".publication.PublicationView"
+        template="listing_publication.pt"
+        permission="zope2.View"
+    />
+-->
+    <browser:page
+        for="Products.ATContentTypes.interfaces.IATNewsItem"
+        name="listing_snippet"
+        template="listing_newsitem.pt"
+        permission="zope2.View"
+    />
+
+    <browser:page
+        for="Products.ATContentTypes.interfaces.IATEvent"
+        name="listing_snippet"
+        template="listing_event.pt"
+        permission="zope2.View"
+    />
+    <!-- END Snippet views for Folder listing view -->
+
 </configure>
