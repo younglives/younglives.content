@@ -1,0 +1,350 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="younglives.policy">
+      
+<body>
+
+<metal:main fill-slot="main">
+                    
+    <div tal:replace="structure provider:plone.abovecontenttitle" />
+    <div tal:replace="structure provider:plone.belowcontenttitle" />
+    <div tal:replace="structure provider:plone.abovecontentbody" />
+    
+    <h1 tal:content="context/Title">Newletter</h1>
+
+    <p tal:content="context/Description">The Young Lives newsletter is a quarterly e-mail with announcements of 
+    events and publications as well as news of Young Lives research. Your details will 
+    not be shared with any other organisation, and you can opt out at any time.</p>
+    
+    <div class="formHolder">
+    
+        <form action="http://younglives.createsend.com/t/r/s/buldur/" method="post" id="subForm">
+        
+            <ul>
+            
+                <li>
+                    <label for="name">Name *</label>
+                    <input type="text" name="cm-name" id="name" />
+                </li>
+            
+                <li>
+                    <label for="buldur-buldur">Email *</label>
+                    <input type="text" name="cm-buldur-buldur" id="buldur-buldur" />
+                </li>
+                
+                <li>
+                    <label for="Your Organisation">Your Organisation</label>
+                    <select name="cm-fo-htpb">
+                        <option value="738382">Government agency/ministry</option>
+                        <option value="738384">National NGO</option>
+                        <option value="738385">International NGO</option>
+                        <option value="738386">UN/bilateral</option>
+                        <option value="738387">Policy think-tank</option>
+                        <option value="738388">Media/communications</option>
+                        <option value="738389">Academic/research institution</option>
+                        <option value="738390">Other</option>
+                    </select>
+                </li>
+                
+                <li>    
+                    <label for="Your role">Your role</label>
+                    <select name="cm-fo-htpn">
+                        <option value="738383">Policy staff</option>
+                        <option value="738391">Programme staff</option>
+                        <option value="738392">Research</option>
+                        <option value="738393">Communications</option>
+                        <option value="738394">Student</option>
+                        <option value="738395">Other</option>
+                    </select>
+                </li>
+            
+                <li>
+                    <label for="Preferred email format">Preferred email format</label>
+                    <select name="cm-fo-htpa">
+                        <option value="738396">Plain Text</option>
+                        <option value="738397">Text and pictures (HTML)</option>
+                    </select>
+                </li>
+            
+                <li>
+                    <label for="Country">Country:</label>
+                    <select name="cm-fo-htpv">
+                        <option value="738398">Afghanistan</option>
+                        <option value="738399">Albania</option>
+                        <option value="738400">Algeria</option>
+                        <option value="738401">American Samoa</option>
+                        <option value="738402">Andorra</option>
+                        <option value="738403">Angola</option>
+                        <option value="738404">Anguilla</option>
+                        <option value="738405">Antigua & Barbuda</option>
+                        <option value="738406">Argentina</option>
+                        <option value="738407">Armenia</option>
+                        <option value="738408">Aruba</option>
+                        <option value="738409">Australia</option>
+                        <option value="738410">Austria</option>
+                        <option value="738411">Azerbaijan</option>
+                        <option value="738412">Azores</option>
+                        <option value="738413">Bahamas</option>
+                        <option value="738414">Bahrain</option>
+                        <option value="738415">Bangladesh</option>
+                        <option value="738416">Barbados</option>
+                        <option value="738417">Belarus</option>
+                        <option value="738418">Belgium</option>
+                        <option value="738419">Belize</option>
+                        <option value="738420">Benin</option>
+                        <option value="738421">Bermuda</option>
+                        <option value="738422">Bhutan</option>
+                        <option value="738423">Bolivia</option>
+                        <option value="738424">Bonaire</option>
+                        <option value="738425">Bosnia & Herzegovina</option>
+                        <option value="738426">Botswana</option>
+                        <option value="738427">Brazil</option>
+                        <option value="738428">British Indian Ocean Ter</option>
+                        <option value="738429">Brunei</option>
+                        <option value="738430">Bulgaria</option>
+                        <option value="738431">Burkina Faso</option>
+                        <option value="738432">Burundi</option>
+                        <option value="738433">Cambodia</option>
+                        <option value="738434">Cameroon</option>
+                        <option value="738435">Canada</option>
+                        <option value="738436">Canary Islands</option>
+                        <option value="738437">Cape Verde</option>
+                        <option value="738438">Cayman Islands</option>
+                        <option value="738439">Central African Republic</option>
+                        <option value="738440">Chad</option>
+                        <option value="738441">Channel Islands</option>
+                        <option value="738442">Chile</option>
+                        <option value="738443">China</option>
+                        <option value="738444">Christmas Island</option>
+                        <option value="738445">Cocos Island</option>
+                        <option value="738446">Columbia</option>
+                        <option value="738447">Comoros</option>
+                        <option value="738448">Congo</option>
+                        <option value="738449">Congo Democratic Rep</option>
+                        <option value="738450">Cook Islands</option>
+                        <option value="738451">Costa Rica</option>
+                        <option value="738452">Cote D'Ivoire</option>
+                        <option value="738453">Croatia</option>
+                        <option value="738454">Cuba</option>
+                        <option value="738455">Curacao</option>
+                        <option value="738456">Cyprus</option>
+                        <option value="738457">Czech Republic</option>
+                        <option value="738458">Denmark</option>
+                        <option value="738459">Djibouti</option>
+                        <option value="738460">Dominica</option>
+                        <option value="738461">Dominican Republic</option>
+                        <option value="738462">East Timor</option>
+                        <option value="738463">Ecuador</option>
+                        <option value="738464">Egypt</option>
+                        <option value="738465">El Salvador</option>
+                        <option value="738466">Equatorial Guinea</option>
+                        <option value="738467">Eritrea</option>
+                        <option value="738468">Estonia</option>
+                        <option value="738469">Ethiopia</option>
+                        <option value="738470">Falkland Islands</option>
+                        <option value="738471">Faroe Islands</option>
+                        <option value="738472">Fiji</option>
+                        <option value="738473">Finland</option>
+                        <option value="738474">France</option>
+                        <option value="738475">French Guiana</option>
+                        <option value="738476">French Polynesia</option>
+                        <option value="738477">French Southern Ter</option>
+                        <option value="738478">Gabon</option>
+                        <option value="738479">Gambia</option>
+                        <option value="738480">Georgia</option>
+                        <option value="738481">Germany</option>
+                        <option value="738482">Ghana</option>
+                        <option value="738483">Gibraltar</option>
+                        <option value="738484">Great Britain</option>
+                        <option value="738485">Greece</option>
+                        <option value="738486">Greenland</option>
+                        <option value="738487">Grenada</option>
+                        <option value="738488">Guadeloupe</option>
+                        <option value="738489">Guam</option>
+                        <option value="738490">Guatemala</option>
+                        <option value="738491">Guinea</option>
+                        <option value="738492">Guyana</option>
+                        <option value="738493">Haiti</option>
+                        <option value="738494">Honduras</option>
+                        <option value="738495">Hong Kong</option>
+                        <option value="738496">Hungary</option>
+                        <option value="738497">Iceland</option>
+                        <option value="738498">India</option>
+                        <option value="738499">Indonesia</option>
+                        <option value="738500">Iran</option>
+                        <option value="738501">Iraq</option>
+                        <option value="738502">Ireland</option>
+                        <option value="738503">Isle of Man</option>
+                        <option value="738504">Israel</option>
+                        <option value="738505">Italy</option>
+                        <option value="738506">Jamaica</option>
+                        <option value="738507">Japan</option>
+                        <option value="738508">Jordan</option>
+                        <option value="738509">Kazakhstan</option>
+                        <option value="738510">Kenya</option>
+                        <option value="738511">Kiribati</option>
+                        <option value="738512">Korea North</option>
+                        <option value="738513">Korea South</option>
+                        <option value="738514">Kuwait</option>
+                        <option value="738515">Kyrgyzstan</option>
+                        <option value="738516">Laos</option>
+                        <option value="738517">Latvia</option>
+                        <option value="738518">Lebanon</option>
+                        <option value="738519">Lesotho</option>
+                        <option value="738520">Liberia</option>
+                        <option value="738521">Libya</option>
+                        <option value="738522">Liechtenstein</option>
+                        <option value="738523">Lithuania</option>
+                        <option value="738524">Luxembourg</option>
+                        <option value="738525">Macau</option>
+                        <option value="738526">Macedonia</option>
+                        <option value="738527">Madagascar</option>
+                        <option value="738528">Malawi</option>
+                        <option value="738529">Malaysia</option>
+                        <option value="738530">Maldives</option>
+                        <option value="738531">Mali</option>
+                        <option value="738532">Malta</option>
+                        <option value="738533">Marshall Islands</option>
+                        <option value="738534">Martinique</option>
+                        <option value="738535">Mauritania</option>
+                        <option value="738536">Mauritius</option>
+                        <option value="738537">Mayotte</option>
+                        <option value="738538">Mexico</option>
+                        <option value="738539">Midway Islands</option>
+                        <option value="738540">Moldova</option>
+                        <option value="738541">Monaco</option>
+                        <option value="738542">Mongolia</option>
+                        <option value="738543">Montserrat</option>
+                        <option value="738544">Morocco</option>
+                        <option value="738545">Mozambique</option>
+                        <option value="738546">Myanmar</option>
+                        <option value="738547">Namibia</option>
+                        <option value="738548">Nauru</option>
+                        <option value="738549">Nepal</option>
+                        <option value="738550">Netherland Antilles</option>
+                        <option value="738551">Netherlands</option>
+                        <option value="738552">Nevis</option>
+                        <option value="738553">New Caledonia</option>
+                        <option value="738554">New Zealand</option>
+                        <option value="738555">Nicaragua</option>
+                        <option value="738556">Niger</option>
+                        <option value="738557">Nigeria</option>
+                        <option value="738558">Niue</option>
+                        <option value="738559">Norfolk Island</option>
+                        <option value="738560">Norway</option>
+                        <option value="738561">Oman</option>
+                        <option value="738562">Pakistan</option>
+                        <option value="738563">Palau Island</option>
+                        <option value="738564">Palestine</option>
+                        <option value="738565">Panama</option>
+                        <option value="738566">Papua New Guinea</option>
+                        <option value="738567">Paraguay</option>
+                        <option value="738568">Peru</option>
+                        <option value="738569">Philippines</option>
+                        <option value="738570">Pitcairn Island</option>
+                        <option value="738571">Poland</option>
+                        <option value="738572">Portugal</option>
+                        <option value="738573">Puerto Rico</option>
+                        <option value="738574">Qatar</option>
+                        <option value="738575">Reunion</option>
+                        <option value="738576">Romania</option>
+                        <option value="738577">Russia</option>
+                        <option value="738578">Rwanda</option>
+                        <option value="738579">Saipan</option>
+                        <option value="738580">Samoa</option>
+                        <option value="738581">Samoa American</option>
+                        <option value="738582">San Marino</option>
+                        <option value="738583">Sao Tome & Principe</option>
+                        <option value="738584">Saudi Arabia</option>
+                        <option value="738585">Senegal</option>
+                        <option value="738586">Serbia & Montenegro</option>
+                        <option value="738587">Seychelles</option>
+                        <option value="738588">Sierra Leone</option>
+                        <option value="738589">Singapore</option>
+                        <option value="738590">Slovakia</option>
+                        <option value="738591">Slovenia</option>
+                        <option value="738592">Solomon Islands</option>
+                        <option value="738593">Somalia</option>
+                        <option value="738594">South Africa</option>
+                        <option value="738595">Spain</option>
+                        <option value="738596">Sri Lanka</option>
+                        <option value="738597">St Barthelemy</option>
+                        <option value="738598">St Eustatius</option>
+                        <option value="738599">St Helena</option>
+                        <option value="738600">St Kitts-Nevis</option>
+                        <option value="738601">St Lucia</option>
+                        <option value="738602">St Maarten</option>
+                        <option value="738603">St Pierre & Miquelon</option>
+                        <option value="738604">St Vincent & Grenadines</option>
+                        <option value="738605">Sudan</option>
+                        <option value="738606">Suriname</option>
+                        <option value="738607">Swaziland</option>
+                        <option value="738608">Sweden</option>
+                        <option value="738609">Switzerland</option>
+                        <option value="738610">Syria</option>
+                        <option value="738611">Tahiti</option>
+                        <option value="738612">Taiwan</option>
+                        <option value="738613">Tajikistan</option>
+                        <option value="738614">Tanzania</option>
+                        <option value="738615">Thailand</option>
+                        <option value="738616">Togo</option>
+                        <option value="738617">Tokelau</option>
+                        <option value="738618">Tonga</option>
+                        <option value="738619">Trinidad & Tobago</option>
+                        <option value="738620">Tunisia</option>
+                        <option value="738621">Turkey</option>
+                        <option value="738622">Turkmenistan</option>
+                        <option value="738623">Turks & Caicos Is</option>
+                        <option value="738624">Tuvalu</option>
+                        <option value="738625">Uganda</option>
+                        <option value="738626">Ukraine</option>
+                        <option value="738627">United Arab Emirates</option>
+                        <option value="738628">United Kingdom</option>
+                        <option value="738629">United States of America</option>
+                        <option value="738630">Uruguay</option>
+                        <option value="738631">Uzbekistan</option>
+                        <option value="738632">Vanuatu</option>
+                        <option value="738633">Vatican City State</option>
+                        <option value="738634">Venezuela</option>
+                        <option value="738635">Vietnam</option>
+                        <option value="738636">Virgin Islands (Brit)</option>
+                        <option value="738637">Virgin Islands (USA)</option>
+                        <option value="738638">Wake Island</option>
+                        <option value="738639">Wallis & Futana Is</option>
+                        <option value="738640">Yemen</option>
+                        <option value="738641">Zambia</option>
+                        <option value="738642">Zimbabwe</option>
+                    </select>
+                </li>
+            
+                <li class="formControls">
+                    <input type="submit" id="submit" value="Subscribe" />
+                </li>
+                
+                
+                <li><em>* indicates required field</em></li>
+            
+            </ul>
+            
+        </form>
+
+        <p>1998 Data Protection Act: We hold any details you give us for our own monitoring
+         purposes, and will not pass your details on to any third party. If you do not wish to 
+         receive further information, please write to the Communications team at Young Lives, 
+         Department of International Development, 3 Mansfield Road, Oxford OX1 3TB, UK. 
+         <a href="mailto:younglives@younglives.org">younglives@younglives.org</a></p>
+    
+    </div>
+   
+
+
+    <div tal:replace="structure provider:plone.belowcontentbody" />
+
+</metal:main>
+
+</body>
+</html>

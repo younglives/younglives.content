@@ -50,4 +50,15 @@
     />
     <!-- END Snippet views for Folder listing view -->
 
+    <!-- Newsletter -->
+    <browser:defaultView 
+        for="younglives.content.interfaces.browser.INewsletterMarker"
+        name="newsletter" />
+    <browser:page
+        for="younglives.content.interfaces.browser.INewsletterMarker"
+        name="newsletter"
+        template="newsletter.pt"
+        permission="zope.Public" />
+    <!-- End Newsletter -->
+
 </configure>
