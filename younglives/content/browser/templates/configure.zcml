@@ -26,7 +26,7 @@
         template="listing_base.pt"
         permission="zope2.View"
     />
-<!--
+
     <browser:page
         for="younglives.content.interfaces.IPublication"
         name="listing_snippet"
@@ -34,7 +34,7 @@
         template="listing_publication.pt"
         permission="zope2.View"
     />
--->
+
     <browser:page
         for="Products.ATContentTypes.interfaces.IATNewsItem"
         name="listing_snippet"
