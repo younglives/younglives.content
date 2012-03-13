@@ -88,4 +88,15 @@
         permission="zope.Public" />
     <!-- End Publication popup -->
 
+    <!-- News -->
+    <browser:defaultView 
+        for="Products.ATContentTypes.interfaces.IATNewsItem"
+        name="news_view" />
+    <browser:page 
+        for="Products.ATContentTypes.interfaces.IATNewsItem"
+        name="news_view"
+        class=".news.NewsView"
+        template="news_item.pt"
+        permission="zope.Public" />  
+
 </configure>
