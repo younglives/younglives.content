@@ -58,7 +58,7 @@
         for="younglives.content.interfaces.browser.INewsletterMarker"
         name="newsletter"
         template="newsletter.pt"
-        permission="zope.Public" />
+        permission="zope2.View" />
     <!-- End Newsletter -->
 
     <!-- Publication popup -->
@@ -97,6 +97,6 @@
         name="news_view"
         class=".news.NewsView"
         template="news_item.pt"
-        permission="zope.Public" />  
+        permission="zope2.View" />  
 
 </configure>

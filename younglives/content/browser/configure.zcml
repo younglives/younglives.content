@@ -11,7 +11,7 @@
         name="publication_view"
         class=".publication.PublicationView"
         template="publication.pt"
-        permission="zope.Public" />
+        permission="zope2.View" />
 
     <include package=".templates" />
 
