@@ -12,7 +12,7 @@
         name="document_view"
         class=".document.DocumentView"
         template="document_item.pt"
-        permission="zope.Public" />  
+        permission="zope2.View" />  
 
     <!-- Folder -->
     <browser:page for="*"
