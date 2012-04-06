@@ -96,6 +96,6 @@ class Publication(ATDocument):
 
     def refBrowserFolder(self):
         """Start up directory for the reference browser widget"""
-        return 'files'
+        return '/files'
 
 atapi.registerType(Publication, PROJECTNAME)
