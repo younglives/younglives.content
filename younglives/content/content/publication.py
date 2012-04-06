@@ -19,7 +19,7 @@ from younglives.content.interfaces import IPublication
 from younglives.content.config import *
 
 PublicationSchema = ATDocument.schema.copy() + atapi.Schema((
-                                                             
+
     atapi.StringField('subtitle',
         required = 0,
         searchable = 1,
@@ -39,7 +39,7 @@ PublicationSchema = ATDocument.schema.copy() + atapi.Schema((
                       default = u"Author"),
             description = _(u"publication_author_desc", 
                             default = u"Enter publication's author."),)),
-         
+
     atapi.StringField('series',
         required = 0,
         searchable = 1,
@@ -60,7 +60,7 @@ PublicationSchema = ATDocument.schema.copy() + atapi.Schema((
                       default = u"Date"),
             description = _(u"publication_publication-date_desc", 
                             default = u"Publication date"),)),
-                            
+
     atapi.ReferenceField('files',
         required = 1,
         multiValued = 1,
@@ -69,7 +69,8 @@ PublicationSchema = ATDocument.schema.copy() + atapi.Schema((
         widget = ReferenceBrowserWidget(
             hide_inaccessible = 1,
             force_close_on_insert = 0,
-            image_portal_types = ('File',),         
+            image_portal_types = ('File',),
+            startup_directory_method = 'refBrowserFolder',
             label = _(u"publication_files_label",
                       default = u"Files"),
             description = _(u"publication_files_desc", 
@@ -92,5 +93,10 @@ class Publication(ATDocument):
 
     meta_type = "Publication"
     schema = PublicationSchema
+
+    def refBrowserFolder(self):
+        """Start up directory for the reference browser widget"""
+        import pdb;pdb.set_trace()
+        return 'files'
 
 atapi.registerType(Publication, PROJECTNAME)
