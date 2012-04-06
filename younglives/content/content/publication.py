@@ -96,7 +96,6 @@ class Publication(ATDocument):
 
     def refBrowserFolder(self):
         """Start up directory for the reference browser widget"""
-        import pdb;pdb.set_trace()
         return 'files'
 
 atapi.registerType(Publication, PROJECTNAME)
