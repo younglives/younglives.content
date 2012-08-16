@@ -61,33 +61,6 @@
         permission="zope2.View" />
     <!-- End Newsletter -->
 
-    <!-- Publication popup -->
-    <browser:page
-        for="*"
-        name="capturePopup"
-        class=".captureddata.CapturedDataView"
-        permission="zope.Public" />
-        
-    <browser:page
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="export-captured-data"
-        class=".captureddataexport.CapturedDataExportView"
-        permission="cmf.ManagePortal" />
-        
-    <browser:page
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="captured-data-settings"
-        class=".captureddatasettings.CapturedDataSettingsView"
-        template="captureddatasettings.pt"
-        permission="cmf.ManagePortal" />
-        
-    <browser:page
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="captured-data-mail"
-        class=".captureddatamail.CapturedDataMailView"
-        permission="zope.Public" />
-    <!-- End Publication popup -->
-
     <!-- News -->
     <browser:defaultView 
         for="Products.ATContentTypes.interfaces.IATNewsItem"
