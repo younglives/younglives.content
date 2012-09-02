@@ -2,7 +2,7 @@
                  files view/files;
                  wtool context/@@plone_tools/workflow;
                  normalizeString nocall: context/plone_utils/normalizeString;
-	             item_wf_state_class python:'state-' + normalizeString(wtool.getInfoFor(context, 'review_state'));">
+                 item_wf_state_class python:'state-' + normalizeString(wtool.getInfoFor(context, 'review_state'));">
 
 <div class="info">
 
@@ -13,21 +13,17 @@
                            class item_wf_state_class"
         ><span tal:replace="context/Title" />
          <span condition="context/getSubtitle" tal:content="context/getSubtitle" /></a></h4>
-    
-    
-<!-- Info -->      
+
+<!-- Info -->
     <p class="pubdate" tal:content="python:context.toLocalizedTime(context.getPublication_date() or context.Date())" />
     <p class="pubinfo"><span tal:replace="context/getSeries" />, <span tal:replace="context/getAuthor" /></p>
-        
 
-<!-- Description -->             
+<!-- Description -->
     <p tal:content="context/Description" />
-    
 
 <!-- Files -->
     <p class="download"
-	   tal:repeat="file view/files">
-       
+       tal:repeat="file view/files">
         <a href="#" class="" title=""
         tal:attributes="href file/url;
                         class file/css;
@@ -38,7 +34,5 @@
              <span tal:replace="file/content_type" />
         </span>)
     </p>
-    
 </div>
-    
 </tal:pub>
