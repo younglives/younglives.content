@@ -1,8 +1,13 @@
 Changelog
 =========
 
-1.0.2 Unreleased
+1.0.2 2012/09/18
 ----------------
+
+ - Add an image field to publication
+ - Restore the interfaces so they can be removed
+ - Remove the data capture form
+ - Reverse the order of the authors for articles
 
 1.0.1 2012/04/09
 ----------------
