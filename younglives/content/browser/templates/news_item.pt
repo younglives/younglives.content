@@ -15,12 +15,12 @@
         <div tal:replace="structure provider:plone.belowcontenttitle" />
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
-	    <h2 tal:content="context/Title">Title</h2>
-	    <p class="date"><span tal:content="python:context.toLocalizedTime(context.Date())"/></p>
+        <h2 tal:content="context/Title">Title</h2>
+        <p class="date"><span tal:content="python:context.toLocalizedTime(context.Date())"/></p>
     
         <div class="image-right"
              tal:condition="context/image|nothing">
-            <img tal:replace="structure python:context.tag(scale='mini')" src="" alt="" />
+            <img tal:replace="structure python:context.tag(scale='preview')" src="" alt="" />
             <p tal:condition="context/imageCaption" 
                tal:content="context/imageCaption" />
         </div>
