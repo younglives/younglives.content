@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<registry>
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.theme">
+    <value key="title">Theme</value>
+    <value key="description">The theme index</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+        <element>plone.app.querystring.operation.string.is</element>
+    </value>
+    <value key="group">Metadata</value>
+  </records>
+</registry>
