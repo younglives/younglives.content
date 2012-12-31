@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<portlets xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="younglives.content">
+
+    <portlet addview="younglives.portlets.KeyResources"
+        title="Key resources"
+        description="A portlet which shows context related resources"
+        i18n:attributes="title title_key-resources_portlet;
+        description description_key-resources_portlet">
+        <for interface="plone.app.portlets.interfaces.IRightColumn" />
+    </portlet>
+    
+    <portlet addview="younglives.portlets.Latest" title="Latest items"
+        description="A portlet which shows latest items"
+        i18n:attributes="title title_latest_portlet;
+        description description_latest_portlet">
+        <for interface="plone.app.portlets.interfaces.IRightColumn" />
+    </portlet>
+
+</portlets>
