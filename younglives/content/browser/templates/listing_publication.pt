@@ -24,7 +24,7 @@
             <span tal:replace="context/getSeries" />
         </tal:details-journal>
         <tal:details-other condition="python:parent_id not in ['journal-articles-1', 'articles']">
-            <span tal:replace="context/getSeries" />,
+            <tal:condition condition="context/getSeries"><span tal:replace="context/getSeries" />,</tal:condition>
             <span tal:replace="context/getAuthor" />
         </tal:details-other>
     </p>
