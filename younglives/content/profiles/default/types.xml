@@ -2,10 +2,7 @@
 
 <object name="portal_types" meta_type="Plone Types Tool">
 
-    <object name="Audio"
-        meta_type="Factory-based Type Information with dynamic views" />
-
-    <object name="HomePage"
+    <object name="Folder"
         meta_type="Factory-based Type Information with dynamic views" />
 
     <object name="Publication"
