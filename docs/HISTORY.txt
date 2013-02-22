@@ -1,8 +1,13 @@
 Changelog
 =========
 
-1.0.3 Unreleased
+1.0.3 2013/02/22
 ----------------
+
+ - Navigation portlet displayed at root level
+ - listing view method for folder type
+ - Latest news and key resources portlets are addable
+ - Make the image in the news view bigger
 
 1.0.2 2012/09/18
 ----------------
