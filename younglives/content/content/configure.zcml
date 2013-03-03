@@ -21,14 +21,6 @@
         <implements interface="younglives.content.interfaces.IBannerAware" />
     </class>
 
-    <class class="Products.ATContentTypes.atct.ATTopic">
-        <implements interface="younglives.content.interfaces.IHomepageBoxAware" />
-    </class>
-
-    <class class="Products.ATContentTypes.atct.ATDocument">
-        <implements interface="younglives.content.interfaces.IHomepageHeroAware" />
-    </class>
-
     <class class="Products.ATContentTypes.atct.ATDocument">
         <implements interface="younglives.content.interfaces.IQuoteAware" />
     </class>

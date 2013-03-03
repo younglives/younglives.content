@@ -1,7 +1,3 @@
-from content import IHomepageHeroAware
-from content import IHomepageHeroMarker
-from content import IHomepageBoxMarker
-from content import IHomepageBoxAware
 from content import IBannerAware
 from content import IQuoteAware
 from content import IPublication

@@ -22,14 +22,6 @@
     <adapter factory=".gallery.GalleryContainerExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="younglives.ext.gallery-container" />
-        
-    <adapter factory=".homepage.HomepageHeroExtender"
-        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
-        name="younglives.ext.homepage-hero" />
-        
-    <adapter factory=".homepage.HomepageBoxExtender"
-        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
-        name="younglives.ext.homepage-box" />
 
     <adapter factory=".quote.QuoteExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
