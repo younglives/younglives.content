@@ -4,7 +4,6 @@
     i18n_domain="younglives.content">
 
     <interface interface="..interfaces.browser.IOurPublicationsFolderMarker" />
-    <interface interface="..interfaces.browser.IOurThemesFolderMarker" />
     <interface interface="..interfaces.browser.IWhatWeDoFolderMarker" />
     <interface interface="..interfaces.browser.IWhereWeWorkFolderMarker" />
     <interface interface="..interfaces.browser.IWhoWeAreFolderMarker" />

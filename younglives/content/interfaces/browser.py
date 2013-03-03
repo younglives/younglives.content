@@ -26,9 +26,6 @@ class IIntranetFolderMarker(Interface):
 class IOurPublicationsFolderMarker(Interface):
     """ Marker interface for Our Publications folder. """
     
-class IOurThemesFolderMarker(Interface):
-    """ Marker interface for Our Themes folder. """
-    
 class IWhatWeDoFolderMarker(Interface):
     """ Marker interface for What We Do folder. """
     
