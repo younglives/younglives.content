@@ -1,7 +1,7 @@
 <configure 
     xmlns="http://namespaces.zope.org/zope" 
     xmlns:five="http://namespaces.zope.org/five"
-    i18n_domain="younglives.policy">
+    i18n_domain="younglives.content">
     
     <adapter factory=".banner.BannerExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
