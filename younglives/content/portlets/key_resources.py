@@ -11,6 +11,7 @@ from zope.interface import implements
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.memoize.instance import memoize
+from Products.CMFPlone.utils import base_hasattr
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 # local
@@ -63,8 +64,9 @@ class Renderer(base.Renderer):
 
     @memoize
     def _data(self):
-        return self.context.computeRelatedItems()
-
+        if base_hasattr(self.context, 'getRelatedItems'):
+            return self.context.getRelatedItems()
+        return []
 
 class AddForm(base.AddForm):
     """ Portlet add form. """
