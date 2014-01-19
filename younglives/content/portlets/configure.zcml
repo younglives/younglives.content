@@ -6,13 +6,6 @@
     i18n_domain="younglives.content">
 
     <include package="plone.app.portlets" />
-    
-    <plone:portlet name="younglives.portlets.Gallery" 
-        interface=".gallery.IGalleryPortlet"
-        assignment=".gallery.Assignment" 
-        renderer=".gallery.Renderer"
-        addview=".gallery.AddForm" 
-        editview=".gallery.EditForm" />
         
     <plone:portlet name="younglives.portlets.KeyResources" 
         interface=".key_resources.IKeyResourcesPortlet"
