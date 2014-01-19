@@ -6,10 +6,6 @@
     <!--  ********** Extenders ********** -->
 
     <class class="plone.app.folder.folder.ATFolder">
-        <implements interface="younglives.content.interfaces.IGalleryContainerAware" />
-    </class>
-
-    <class class="plone.app.folder.folder.ATFolder">
         <implements interface="younglives.content.interfaces.IBannerAware" />
     </class>
 

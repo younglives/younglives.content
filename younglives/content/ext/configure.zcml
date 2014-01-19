@@ -15,14 +15,6 @@
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="younglives.ext.file" />
 
-    <adapter factory=".gallery.GalleryReferenceExtender"
-        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
-        name="younglives.ext.gallery-reference" />
-        
-    <adapter factory=".gallery.GalleryContainerExtender"
-        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
-        name="younglives.ext.gallery-container" />
-
     <adapter factory=".quote.QuoteExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="younglives.ext.quote" />
