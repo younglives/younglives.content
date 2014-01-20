@@ -12,7 +12,7 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 
 # local
 from younglives.content.browser.interfaces import IYounglivesContent
-from younglives.content.interfaces import IQuoteAware
+from younglives.content.interfaces import ICategoriesAware
 from younglives.content import _
 
 class ExtLinesField(ExtensionField, atapi.LinesField):
@@ -26,7 +26,7 @@ class CategoriesExtender(object):
     topic -- topic tags
     """
 
-    adapts(IQuoteAware)
+    adapts(ICategoriesAware)
     implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
 
     layer = IYounglivesContent
