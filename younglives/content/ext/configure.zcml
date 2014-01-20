@@ -14,10 +14,6 @@
     <adapter factory=".file.FileExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="younglives.ext.file" />
-
-    <adapter factory=".quote.QuoteExtender"
-        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
-        name="younglives.ext.quote" />
         
     <adapter factory=".sortable.SortableExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"

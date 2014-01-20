@@ -25,7 +25,7 @@ class CategoriesExtender(object):
     theme -- theme tags
     topic -- topic tags
     """
-        
+
     adapts(IQuoteAware)
     implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
 

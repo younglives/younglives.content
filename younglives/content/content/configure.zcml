@@ -18,10 +18,6 @@
     </class>
 
     <class class="Products.ATContentTypes.atct.ATDocument">
-        <implements interface="younglives.content.interfaces.IQuoteAware" />
-    </class>
-
-    <class class="Products.ATContentTypes.atct.ATDocument">
         <implements interface="younglives.content.interfaces.ICategoriesAware" />
     </class>
 
