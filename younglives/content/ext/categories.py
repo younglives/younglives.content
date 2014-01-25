@@ -22,8 +22,7 @@ class ExtLinesField(ExtensionField, atapi.LinesField):
 class CategoriesExtender(object):
     """ New fields:
     
-    theme -- theme tags
-    topic -- topic tags
+    categoryCountry -- theme tags
     """
 
     adapts(IBaseContent)
@@ -32,20 +31,6 @@ class CategoriesExtender(object):
     layer = IYounglivesContent
 
     fields = [
-              
-        ExtLinesField('theme',
-            required = 0,
-            multiValued = 1,
-            accessor = 'theme',
-            schemata = 'categorization',
-            languageIndependent = 0,
-            widget = atapi.KeywordWidget(
-                label = _(u"category_theme_label", 
-                    default = u"Theme"),
-                description = _(u"category_theme_desc",
-                    default = u"Select or create new theme to tag this item."),
-            ),
-        ),
                     
         ExtLinesField('categoryCountry',
             required = 0,
@@ -70,8 +55,6 @@ class CategoriesExtender(object):
     def getOrder(self, original):
         categorization = original['categorization']
         subject = categorization.index('subject')
-        categorization.remove('theme')
-        categorization.insert(subject, 'theme')
         categorization.remove('categoryCountry')
         categorization.insert(subject, 'categoryCountry')
         return original
