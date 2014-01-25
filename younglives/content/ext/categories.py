@@ -6,13 +6,13 @@ from zope.interface import implements
 
 # Plone
 from Products.Archetypes import atapi
+from Products.Archetypes.interfaces import IBaseContent
 from archetypes.schemaextender.field import ExtensionField
 from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
 from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 
 # local
 from younglives.content.browser.interfaces import IYounglivesContent
-from younglives.content.interfaces import ICategoriesAware
 from younglives.content import _
 
 class ExtLinesField(ExtensionField, atapi.LinesField):
@@ -26,7 +26,7 @@ class CategoriesExtender(object):
     topic -- topic tags
     """
 
-    adapts(ICategoriesAware)
+    adapts(IBaseContent)
     implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
 
     layer = IYounglivesContent
@@ -43,20 +43,22 @@ class CategoriesExtender(object):
                 label = _(u"category_theme_label", 
                     default = u"Theme"),
                 description = _(u"category_theme_desc",
-                    default = u"Select or create new theme to tag this item."),)),
+                    default = u"Select or create new theme to tag this item."),
+            ),
+        ),
                     
-        ExtLinesField('topic',
+        ExtLinesField('categoryCountry',
             required = 0,
             multiValued = 1,
-            accessor = 'topic',
+            #accessor = 'categoryCountry',
             schemata = 'categorization',
             languageIndependent = 0,
             widget = atapi.KeywordWidget(
-                label = _(u"category_topic_label", 
-                    default = u"Topic"),
-                description = _(u"category_topic_desc",
-                    default = u"Select or create new topic to tag this item."),)),
-
+                label = _(u"categoryCountry_label",
+                    default = u"Country"),
+                description = _(u"categoryCountry_desc",),
+            ),
+        ),
     ]
     
     def __init__(self, context):
@@ -68,8 +70,8 @@ class CategoriesExtender(object):
     def getOrder(self, original):
         categorization = original['categorization']
         subject = categorization.index('subject')
-        categorization.remove('topic')
-        categorization.insert(subject, 'topic')
         categorization.remove('theme')
         categorization.insert(subject, 'theme')
+        categorization.remove('categoryCountry')
+        categorization.insert(subject, 'categoryCountry')
         return original
