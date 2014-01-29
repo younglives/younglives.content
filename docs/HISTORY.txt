@@ -1,8 +1,11 @@
 Changelog
 =========
 
-1.0.4 Unreleased
+1.0.4 2014/01/29
 ----------------
+
+ - Remove some redundant interfaces
+ - Sort out the categories fields
 
 1.0.3 2013/02/22
 ----------------
