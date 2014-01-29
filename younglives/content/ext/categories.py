@@ -11,8 +11,9 @@ from archetypes.schemaextender.field import ExtensionField
 from archetypes.schemaextender.interfaces import IOrderableSchemaExtender
 from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 
+from younglives.international.browser.interfaces import IYounglivesInternational
+
 # local
-from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content import _
 
 class ExtLinesField(ExtensionField, atapi.LinesField):
@@ -28,7 +29,7 @@ class CategoriesExtender(object):
     adapts(IBaseContent)
     implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
 
-    layer = IYounglivesContent
+    layer = IYounglivesInternational
 
     fields = [
                     
