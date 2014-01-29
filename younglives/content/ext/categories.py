@@ -42,7 +42,8 @@ class CategoriesExtender(object):
             widget = atapi.KeywordWidget(
                 label = _(u"categoryCountry_label",
                     default = u"Country"),
-                description = _(u"categoryCountry_desc",),
+                description = _(u"categoryCountry_desc",
+                    default = u""),
             ),
         ),
     ]
