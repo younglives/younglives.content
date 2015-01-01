@@ -21,17 +21,18 @@ LISTING_INDEXES_TO_SORT_ON = atapi.DisplayList((
     ('getObjPositionInParent', 'Position in folder'),
     ('getId', 'Title'),))
 
+
 class ExtStringField(ExtensionField, atapi.LinesField):
     """ A String field.  """
-       
+
 
 class SortableExtender(object):
     """ Adding new fields:
-    
+
     sortOn -- catalog index
     sortOrder -- sorting order
     """
-        
+
     adapts(ISortableAware)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
 
@@ -39,33 +40,34 @@ class SortableExtender(object):
 
     fields = [
 
-        ExtStringField('sortOn',
-            required = 0,
-            schemata = 'settings',
-            languageIndependent = 1,
-            vocabulary = LISTING_INDEXES_TO_SORT_ON,
-            widget = atapi.SelectionWidget(
-                label = _(u"folder_sort-on_label", 
-                    default = u"Sort by"),
-                description = _(u"folder_sort-on_desc",
-                    default = u"Select index to sort items on."),)),
-                    
-        ExtStringField('sortOrder',
-            required = 0,
-            schemata = 'settings',
-            languageIndependent = 1,
-            vocabulary = ('ascending','descending'),
-            widget = atapi.SelectionWidget(
-                label = _(u"folder_sort-order_label", 
-                    default = u"Sort order"),
-                description = _(u"folder_sort-order_desc",
-                    default = u"Select sort order."),)),
+        ExtStringField(
+            'sortOn',
+            required=0,
+            schemata='settings',
+            languageIndependent=1,
+            vocabulary=LISTING_INDEXES_TO_SORT_ON,
+            widget=atapi.SelectionWidget(
+                label=_(u"folder_sort-on_label",
+                        default=u"Sort by"),
+                description=_(u"folder_sort-on_desc",
+                              default=u"Select index to sort items on."),)),
+
+        ExtStringField(
+            'sortOrder',
+            required=0,
+            schemata='settings',
+            languageIndependent=1,
+            vocabulary=('ascending', 'descending'),
+            widget=atapi.SelectionWidget(
+                label=_(u"folder_sort-order_label",
+                        default=u"Sort order"),
+                description=_(u"folder_sort-order_desc",
+                              default=u"Select sort order."),)),
 
     ]
-    
+
     def __init__(self, context):
         self.context = context
-    
+
     def getFields(self):
         return self.fields
-

@@ -5,11 +5,14 @@ from Products.validation.config import validation
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('younglives.content')
 
-from content.publication import Publication
-from config import PROJECTNAME
+import content.publication.Publication  # noqa
+from younglives.content.config import ADD_PERMISSIONS
+from younglives.content.config import PROJECTNAME
 
 from validators import ImageSizeValidator
+
 validation.register(ImageSizeValidator('checkImageSize'))
+
 
 def initialize(context):
     """Initializer called when used as a Zope 2 product."""
@@ -19,8 +22,9 @@ def initialize(context):
         PROJECTNAME)
 
     for atype, constructor in zip(content_types, constructors):
-        ContentInit('%s: %s' % (PROJECTNAME, atype.portal_type),
-            content_types      = (atype,),
-            permission         = config.ADD_PERMISSIONS[atype.portal_type],
-            extra_constructors = (constructor,),
+        ContentInit(
+            '%s: %s' % (PROJECTNAME, atype.portal_type),
+            content_types=(atype,),
+            permission=ADD_PERMISSIONS[atype.portal_type],
+            extra_constructors=(constructor,),
             ).initialize(context)

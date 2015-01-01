@@ -15,12 +15,14 @@ from younglives.content.interfaces import IBannerAware
 from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content import _
 
+
 class ExtImageField(ExtensionField, atapi.ImageField):
     """ An Image field.  """
 
+
 class BannerExtender(object):
     """ Adding new fields:
-    
+
     banner -- banner image for folders
     """
 
@@ -30,27 +32,30 @@ class BannerExtender(object):
     layer = IYounglivesContent
 
     fields = [
-              
-        ExtImageField("bannerImage",
-                    required = 0,
-                    languageIndependent = 1,
-                    pil_quality = 100,
-                    original_size = (492, 123),
-                    sizes = {'preview':(246,62)},
-                    validsizes = (492, 123),
-                    validators = ("checkImageSize",),
-                    storage = atapi.AnnotationStorage(),
-                    widget = atapi.ImageWidget(
-                        label = _(u"banner-ext_banner-image_label",
-                                  default = u"Banner image"),
-                        description = _(u"banner-ext_banner-image_desc",
-                                        default = u"Upload banner image. \
-Required size is 492x123px."),)),
 
-    ]
-    
+        ExtImageField(
+            "bannerImage",
+            required=0,
+            languageIndependent=1,
+            pil_quality=100,
+            original_size=(492, 123),
+            sizes={'preview': (246, 62)},
+            validsizes=(492, 123),
+            validators=("checkImageSize",),
+            storage=atapi.AnnotationStorage(),
+            widget=atapi.ImageWidget(
+                label=_(
+                    u"banner-ext_banner-image_label",
+                    default=u"Banner image"),
+                description=_(
+                    u"banner-ext_banner-image_desc",
+                    default=u"Upload banner image. \
+                        Required size is 492x123px."),)),
+
+        ]
+
     def __init__(self, context):
         self.context = context
-    
+
     def getFields(self):
         return self.fields

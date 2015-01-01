@@ -1,7 +1,7 @@
 from xmlrpclib import ServerProxy
 
+
 def pushToCountrySites(ob, event):
-    import pdb;pdb.set_trace()
     client = ServerProxy('http://test_user:password@localhost:8080/india')
     weblion = {'/india/weblion': [
         {'title': 'PSU WebLion',
