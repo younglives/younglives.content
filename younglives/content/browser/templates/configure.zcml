@@ -4,15 +4,16 @@
     i18n_domain="younglives.content">
 
     <!-- Document -->
-    <browser:defaultView 
+    <browser:defaultView
         for="Products.ATContentTypes.interface.IATDocument"
         name="document_view" />
-    <browser:page 
+
+    <browser:page
         for="Products.ATContentTypes.interface.IATDocument"
         name="document_view"
         class=".document.DocumentView"
         template="document_item.pt"
-        permission="zope2.View" />  
+        permission="zope2.View" />
 
     <!-- Folder -->
     <browser:page for="*"
@@ -28,7 +29,7 @@
     />
 
     <browser:page
-        for="younglives.content.interfaces.IPublication"
+        for="younglives.content.interfaces.content.IPublication"
         name="listing_snippet"
         class=".publication.PublicationView"
         template="listing_publication.pt"
@@ -51,7 +52,7 @@
     <!-- END Snippet views for Folder listing view -->
 
     <!-- Newsletter -->
-    <browser:defaultView 
+    <browser:defaultView
         for="younglives.content.interfaces.browser.INewsletterMarker"
         name="newsletter" />
     <browser:page
@@ -62,14 +63,14 @@
     <!-- End Newsletter -->
 
     <!-- News -->
-    <browser:defaultView 
+    <browser:defaultView
         for="Products.ATContentTypes.interfaces.IATNewsItem"
         name="news_view" />
-    <browser:page 
+    <browser:page
         for="Products.ATContentTypes.interfaces.IATNewsItem"
         name="news_view"
         class=".news.NewsView"
         template="news_item.pt"
-        permission="zope2.View" />  
+        permission="zope2.View" />
 
 </configure>

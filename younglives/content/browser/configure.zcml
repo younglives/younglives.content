@@ -10,11 +10,11 @@
     <interface interface="..interfaces.browser.INewsletterMarker" />
     <interface interface="..interfaces.content.ISiteTabMarker" />
 
-    <browser:defaultView 
-        for="younglives.content.interfaces.IPublication"
+    <browser:defaultView
+        for="younglives.content.interfaces.content.IPublication"
         name="publication_view" />
-    <browser:page 
-        for="younglives.content.interfaces.IPublication"
+    <browser:page
+        for="younglives.content.interfaces.content.IPublication"
         name="publication_view"
         class=".publication.PublicationView"
         template="publication.pt"

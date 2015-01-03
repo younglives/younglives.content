@@ -5,8 +5,8 @@ from Products.ATContentTypes.content import schemata
 from zope.interface import implements
 
 from younglives.policy import _
-from younglives.policy.config import PROJECTNAME
-from younglives.content.interfaces import IPublication
+from younglives.content.config import PROJECTNAME
+from younglives.content.interfaces.content import IPublication
 
 PublicationSchema = ATDocument.schema.copy() + atapi.Schema((
 

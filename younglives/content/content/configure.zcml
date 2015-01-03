@@ -1,28 +1,28 @@
-<configure 
+<configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="younglives.content">
-    
+
     <!--  ********** Extenders ********** -->
 
     <class class="plone.app.folder.folder.ATFolder">
-        <implements interface="younglives.content.interfaces.IBannerAware" />
+        <implements interface="younglives.content.interfaces.content.IBannerAware" />
     </class>
 
     <class class="plone.app.folder.folder.ATFolder">
-        <implements interface="younglives.content.interfaces.ISortableAware" />
+        <implements interface="younglives.content.interfaces.content.ISortableAware" />
     </class>
 
     <class class="Products.ATContentTypes.atct.ATTopic">
-        <implements interface="younglives.content.interfaces.IBannerAware" />
+        <implements interface="younglives.content.interfaces.content.IBannerAware" />
     </class>
 
     <class class="Products.ATContentTypes.atct.ATDocument">
-        <implements interface="younglives.content.interfaces.ICategoriesAware" />
+        <implements interface="younglives.content.interfaces.content.ICategoriesAware" />
     </class>
 
 <!--
-    <subscriber for="younglives.content.interfaces.IPublication
+    <subscriber for="younglives.content.interfaces.content.IPublication
                      zope.lifecycleevent.interfaces.IObjectModifiedEvent"
                 handler=".events.pushToCountrySites" />
 -->

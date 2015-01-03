@@ -5,7 +5,7 @@ from Products.Five import BrowserView
 from plone.memoize import view
 from zope.interface import implements
 
-from younglives.content.interfaces import IPublicationView
+from younglives.content.interfaces.browser import IPublicationView
 
 MIME_TYPES = [
     {'title': 'Word document',
