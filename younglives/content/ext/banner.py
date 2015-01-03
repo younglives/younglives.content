@@ -11,7 +11,7 @@ from archetypes.schemaextender.interfaces import ISchemaExtender
 from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 
 # local
-from younglives.content.interfaces import IBannerAware
+from younglives.content.interfaces.content import IBannerAware
 from younglives.content.browser.interfaces import IYounglivesContent
 from younglives.content import _
 

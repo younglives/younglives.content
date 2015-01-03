@@ -12,7 +12,7 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 
 # local
 from younglives.content.browser.interfaces import IYounglivesContent
-from younglives.content.interfaces import ISortableAware
+from younglives.content.interfaces.content import ISortableAware
 from younglives.content import _
 
 LISTING_INDEXES_TO_SORT_ON = atapi.DisplayList((
