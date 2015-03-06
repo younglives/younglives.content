@@ -7,19 +7,17 @@
     <div class="news-list">
         <h3 tal:content="view/title">Portlet title</h3>
         <div class="box-inner">
-        <ul class="news">
-            <tal:block repeat="item view/items">
-            <li tal:attributes="class python:repeat['item'].end and 'last' or ''">
-                <a href=""
-                   tal:attributes="href item/getURL;
-                                   title item/Title;">
-                   <span tal:replace="item/Title" />
-                </a>
-				<span class="date" tal:content="python: context.toLocalizedTime(item.Date)" />
-            </li>
-            </tal:block>
-        </ul>
+            <ul class="news">
+                <tal:block repeat="item view/items">
+                <li tal:attributes="class python:repeat['item'].end and 'last' or ''">
+                    <a tal:attributes="href item/getURL;
+                                       title item/Title;">
+                       <span tal:replace="item/Title" />
+                    </a>
+                    <span class="pub_date" tal:content="python: context.toLocalizedTime(item.Date)" />
+                </li>
+                </tal:block>
+            </ul>
         </div>
     </div>
-
 </div>

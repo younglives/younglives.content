@@ -16,7 +16,7 @@
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
         <h2 tal:content="context/Title">Title</h2>
-        <p class="date"><span tal:content="python:context.toLocalizedTime(context.Date())"/></p>
+        <p class="pub_date"><span tal:content="python:context.toLocalizedTime(context.Date())"/></p>
     
         <div class="image-right"
              tal:condition="context/image|nothing">
