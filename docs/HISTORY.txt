@@ -1,8 +1,11 @@
 Changelog
 =========
 
-1.0.5 Unreleased
+1.1.0 2015/03/28
 ----------------
+
+- PEP8 fixes
+- Disable old publication type
 
 1.0.4 2014/01/29
 ----------------
