@@ -8,7 +8,7 @@ from younglives.content import _
 
 EVENTS = "Event"
 NEWS = "News Item"
-PUBLICATIONS = "Publication"
+PUBLICATIONS = "YLPublication"
 ARTICLE = "Document"
 
 
