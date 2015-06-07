@@ -5,7 +5,4 @@
     <object name="Folder"
         meta_type="Factory-based Type Information with dynamic views" />
 
-    <object name="Publication"
-        meta_type="Factory-based Type Information with dynamic views" />
-
 </object>

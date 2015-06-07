@@ -29,14 +29,6 @@
     />
 
     <browser:page
-        for="younglives.content.interfaces.content.IPublication"
-        name="listing_snippet"
-        class=".publication.PublicationView"
-        template="listing_publication.pt"
-        permission="zope2.View"
-    />
-
-    <browser:page
         for="Products.ATContentTypes.interfaces.IATNewsItem"
         name="listing_snippet"
         template="listing_newsitem.pt"

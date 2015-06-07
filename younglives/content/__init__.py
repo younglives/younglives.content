@@ -5,7 +5,6 @@ from Products.validation.config import validation
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('younglives.content')
 
-from younglives.content.content.publication import Publication  # noqa
 from younglives.content.config import ADD_PERMISSIONS
 from younglives.content.config import PROJECTNAME
 

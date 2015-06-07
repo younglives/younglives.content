@@ -21,10 +21,4 @@
         <implements interface="younglives.content.interfaces.content.ICategoriesAware" />
     </class>
 
-<!--
-    <subscriber for="younglives.content.interfaces.content.IPublication
-                     zope.lifecycleevent.interfaces.IObjectModifiedEvent"
-                handler=".events.pushToCountrySites" />
--->
-
 </configure>
