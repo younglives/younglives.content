@@ -14,7 +14,9 @@
                                        title item/Title;">
                        <span tal:replace="item/Title" />
                     </a>
-                    <span class="pub_date" tal:content="python: context.toLocalizedTime(item.Date)" />
+                    <span class="pub_date"
+                        tal:content="python:context.toLocalizedTime(
+                            item.publication_date)" />
                 </li>
                 </tal:block>
             </ul>
