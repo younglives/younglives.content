@@ -1,6 +1,5 @@
 from Products.Archetypes.atapi import process_types, listTypes
 from Products.CMFCore.utils import ContentInit
-from Products.validation.config import validation
 
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('younglives.content')

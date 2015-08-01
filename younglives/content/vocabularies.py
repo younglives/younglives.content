@@ -19,7 +19,6 @@ ARTICLE = "Document"
 ALLOWED_TYPES_FOR_LATEST_ITEMS_PORTLET = (
     SimpleTerm(EVENTS, EVENTS, _(u'Latest events')),
     SimpleTerm(NEWS, NEWS, _(u'Latest news')),
-    SimpleTerm(PUBLICATIONS, PUBLICATIONS, _(u'Latest publications')),
     SimpleTerm(ARTICLE, ARTICLE, _(u"Latest articles")),
 )
 
