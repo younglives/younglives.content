@@ -8,10 +8,6 @@ _ = MessageFactory('younglives.content')
 from younglives.content.config import ADD_PERMISSIONS
 from younglives.content.config import PROJECTNAME
 
-from validators import ImageSizeValidator
-
-validation.register(ImageSizeValidator('checkImageSize'))
-
 
 def initialize(context):
     """Initializer called when used as a Zope 2 product."""
