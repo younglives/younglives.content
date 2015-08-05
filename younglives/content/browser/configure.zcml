@@ -3,12 +3,7 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="younglives.content">
 
-    <interface interface="..interfaces.browser.IOurPublicationsFolderMarker" />
-    <interface interface="..interfaces.browser.IWhatWeDoFolderMarker" />
-    <interface interface="..interfaces.browser.IWhereWeWorkFolderMarker" />
-    <interface interface="..interfaces.browser.IWhoWeAreFolderMarker" />
     <interface interface="..interfaces.browser.INewsletterMarker" />
-    <interface interface="..interfaces.content.ISiteTabMarker" />
 
     <include package=".templates" />
 
