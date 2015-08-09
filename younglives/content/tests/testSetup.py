@@ -21,9 +21,6 @@ class TestInstallation(unittest.TestCase):
         layers = [o.__name__ for o in registered_layers()]
         assert 'IYounglivesContent' in layers
 
-    def testTypesInstalled(self):
-        assert 'Publication' in self.portal.portal_types.objectIds()
-
 
 class TestReinstall(unittest.TestCase):
     """Ensure product can be reinstalled safely"""

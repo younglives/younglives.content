@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<rolemap>
-  <permissions>
-    <permission name="younglives.content: Add Publication" acquire="True">
-      <role name="Contributor"/>
-      <role name="Site Administrator"/>
-    </permission>
-  </permissions>
-</rolemap>
